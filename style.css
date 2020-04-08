@@ -1,0 +1,11 @@
+html, button {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+html {
+    background-image: url("/Images/rows-red-seats-theater_53876-64710.jpg");
+    background-position: center center;
+}
