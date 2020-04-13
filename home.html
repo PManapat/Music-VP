@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <!-- Carousel Font -->
+  <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylehome.css">
   <title>Title</title>
 </head>
@@ -30,23 +32,38 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Contact Us</button>
     </nav>
   </div>
-  <div class="carousel">
+  <div class="carousel container">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" id="trending">
           <img
             src="https://images.unsplash.com/photo-1528489496900-d841974f5290?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-            class="d-block w-100" alt="Event 1">
+            class="d-block w-100" alt="Trending Event 1">
+            <div class="carousel-caption d-none d-md-block">
+              <button>Search</button>
+              <p class='cText'>Checkout Trending Artists heading to the Big Apple</p>
+            </div>
         </div>
         <div class="carousel-item">
           <img
-            src="https://images.unsplash.com/photo-1471565661762-b9dfae862dbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+            src="https://static01.nyt.com/images/2013/07/23/arts/23artsbeat-barclays/23artsbeat-barclays-superJumbo.jpg"
             class="d-block w-100" alt="Event 2">
+            <div class="carousel-caption d-none d-md-block">
+              <p class='cText'>Barclays Biggest Events</p>
+            </div>
         </div>
         <div class="carousel-item">
           <img
             src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
             class="d-block w-100" alt="Event 3">
+            <div class="carousel-caption d-none d-md-block">
+              <p class='cText'></p>
+            </div>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">

@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     //for weather
-   $.ajax({
+    $.ajax({
         url: "https://api.openweathermap.org/data/2.5/forecast?q=New+York&Appid=338c0f586b9c50338b849da24ff79609&units=imperial",
         method: "GET"
     }).then(function (forecast) {
@@ -21,4 +21,21 @@ $(document).ready(function() {
             }
         }
     });
+    // For carousel-begin
+    $.ajax({
+        url: "http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=f35dc94b7584e054481a5dfa63bfb1c8&format=json",
+        method: "GET"
+    }).then(function (trending){
+        // console.log(trending);
+
+        var topArtist = trending.artists.artist[0].name;
+        console.log(topArtist);
+
+        if (topArtist === "The Weeknd"){
+            $("#trending").empty();
+            $("#trending").append("<img src='https://static.billboard.com/files/media/02-the-weeknd-press-2019-cr-Nabil-Elderkin-billboard-1548-1024x677.jpg' class='d-block w-100' alt='Trending Event 1'>");
+            $("#trending").append("<div id='cCaption' class='carousel-caption d-none d-md-block'><button type='button' class='btn btn-danger btn-lg'>Search</button><p class='cText'>Checkout Trending Artists heading to the Big Apple</p></div>")
+        }
+    });
+    // For carousel-end
 })
