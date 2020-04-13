@@ -42,4 +42,26 @@ $(document).ready(function() {
         }
     });
     // For carousel-end
+
+    //Declare variables
+    var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+    var artistSearch = "/discovery/v2/attractions";
+    var genreSearch = "/discovery/v2/classifications/genres/";
+    var dateSearch= "/discovery/v2/events";
+    var queryUrl = "https://app.ticketmaster.com/" + artistSearch + APIKey;
+    //AJAX call ---- Name of event,artist,link,date and venue
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function (response){
+        console.log(response)
+        console.log(response._embedded.attractions[0].name);
+        //Loop top 5 responses
+        for (i =0; i < 5; i++){
+            console.log(response._embedded.attractions[i].url);
+            //Append top 5 responses
+            //$("#artist-modal").empty();
+            $("#artist-modal").append("<h1>").text(response._embedded.attractions[i].name);       
+        }
+    })      
 })
