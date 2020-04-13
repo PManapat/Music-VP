@@ -1,22 +1,40 @@
 button {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+.about {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
 
 html { 
-    background: url(https://image.freepik.com/free-photo/rows-red-seats-theater_53876-64710.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+   background: url(https://media1.tenor.com/images/184ae9a6c8255e7f30d86b1ee26ea4cf/tenor.gif?itemid=4715877) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+     
+     @media screen and (max-width: 1024px) { 
+       img.bg {
+         left: 50%;
+         margin-left: -512px; 
+       }
+     }
+     .fiveDayColor {
+      padding: 20px;
+      background-color:rgba(149, 172, 161, 0.589);
+      color:cornsilk ;
+      float: left;
+      margin: 10px;
+      border: 1px solid lightgray;
   }
-      
-      @media screen and (max-width: 1024px) { 
-        img.bg {
-          left: 50%;
-          margin-left: -512px; 
-        }
-      }
+  
+  .weather {
+      margin-bottom: 200px;
+  }
