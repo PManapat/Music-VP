@@ -4,20 +4,20 @@ $(document).ready(function() {
         url: "https://api.openweathermap.org/data/2.5/forecast?q=New+York&Appid=338c0f586b9c50338b849da24ff79609&units=imperial",
         method: "GET"
     }).then(function (forecast) {
-        console.log(forecast);
+        // console.log(forecast);
         for (i = 0; i < forecast.list.length; i++) {
             if (forecast.list[i].dt_txt.indexOf("18:00:00") !== -1){
-                console.log(forecast.list[i].dt);
-                console.log(forecast)
-                console.log(forecast.list[i].main.temp);
-                console.log(forecast.list[i].main.humidity);
+                // console.log(forecast.list[i].dt);
+                // console.log(forecast)
+                // console.log(forecast.list[i].main.temp);
+                // console.log(forecast.list[i].main.humidity);
 
                 var utfiveday = new Date(forecast.list[i].dt*1000);
                 var utfiveday = new Date(forecast.list[i].dt_txt);
 
                 //console.log(“five day date” + utfiveday);
                 var realfiveDate = utfiveday.toLocaleDateString();
-                console.log(realfiveDate);
+                // console.log(realfiveDate);
                 var forecastcard = $(".weather");
 
                 forecastcard.append("<div class=fiveDayColor>" + "<p>" + realfiveDate + "</p>" + `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` + "<p>" + "Temperature: " + forecast.list[i].main.temp + "</p>" + "<p>" + "Humidity: " + forecast.list[i].main.humidity + "%" + "</p>" + "</div>")
@@ -33,7 +33,7 @@ $(document).ready(function() {
         // console.log(trending);
 
         var topArtist = trending.artists.artist[0].name;
-        console.log(topArtist);
+        // console.log(topArtist);
 
         if (topArtist === "The Weeknd"){
             $("#trending").empty();
@@ -55,13 +55,15 @@ $(document).ready(function() {
         method: "GET"
     }).then(function (response){
         console.log(response)
-        console.log(response._embedded.attractions[0].name);
+        // console.log(response._embedded.attractions[0].name);
         //Loop top 5 responses
         for (i =0; i < 5; i++){
             console.log(response._embedded.attractions[i].url);
             //Append top 5 responses
-            //$("#artist-modal").empty();
-            $("#artist-modal").append("<h1>").text(response._embedded.attractions[i].name);       
+            var urls = response._embedded.attractions[i].url;
+            var names = response._embedded.attractions[i].name;
+            // $("#artist-modal").empty();
+            $("#artist-modal").append("<p class = 'topArtistTix'>" + [i+1] + " <a href='" + urls + "'>" + names + "</a>");       
         }
     })      
 })
