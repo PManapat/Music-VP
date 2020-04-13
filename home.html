@@ -10,7 +10,7 @@
   <!-- Carousel Font -->
   <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylehome.css">
-  <title>Title</title>
+  <title>Music VP</title>
 </head>
 
 <body>
@@ -78,19 +78,19 @@
   </div>
   <div class="container mt-4 mb-4">
     <div class="card">
-      <div class="card-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <div class="card-body text-center">
+        <p>BLah blah blah</p>
       </div>
     </div>
   </div>
   </div>
-  <div class="cards">
+  <div class="cards border">
     <div class="container">
       <div class=row>
         <div class="col-sm mt-4">
           <div class="card text-white bg-dark">
             <div class="card-body">
-              <h5 class="card-title pb-5 pt-5 text-center">GENRES</h5>
+              <h5 class="card-title pb-5 pt-5 text-center">ARTIST</h5>
               <a href="#">Click Here!</a>
             </div>
           </div>
@@ -98,7 +98,7 @@
         <div class="col-sm mt-4">
           <div class="card text-white bg-dark">
             <div class="card-body">
-              <h5 class="card-title pb-5 pt-5 text-center">VENUES</h5>
+              <h5 class="card-title pb-5 pt-5 text-center">GENRE</h5>
               <a href="#">Click Here!</a>
             </div>
           </div>
@@ -113,15 +113,44 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="container mt-4 mb-4">
-    <div class="card">
-      <div class="card-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <div class="container mt-4 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <form>
+          <div class="form-group">
+            <label for="openSearch"></label>
+            <input type="text" class="col-sm-6" placeholder="Search" style="text-align: center;">
+          </div>
+        </form>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  Search Now
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="artist-modal">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
+</div></div>
+      </div>
+    </div>
   </div>
+  
   <div class="container bgcolor">
     <div class="container">
       <div class="row weather m-auto"></div>
