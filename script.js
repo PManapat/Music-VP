@@ -21,7 +21,7 @@ $(document).ready(function() {
                 var forecastcard = $(".weather");
 
                 forecastcard.append("<div class=fiveDayColor>" + "<p>" + realfiveDate + "</p>" + `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` + "<p>" + "Temperature: " + forecast.list[i].main.temp + "</p>" + "<p>" + "Humidity: " + forecast.list[i].main.humidity + "%" + "</p>" + "</div>")
-                forecastcard.append("<div class='fiveDayColor'>" + "<p>" + realfiveDate + "</p>" + '<img src="http://openweathermap.org/img/w/"' + forecast.list[i].weather[0].icon +'.png " > <p>  Temperature: ' + forecast.list[i].main.temp + "</p>" + "<p>" + "Humidity: " + forecast.list[i].main.humidity + "%" + "</p>" + "</div>") 
+               
             }
         }
     });
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
         if (topArtist === "The Weeknd"){
             $("#trending").empty();
-            $("#trending").append("<img src='https://static.billboard.com/files/media/02-the-weeknd-press-2019-cr-Nabil-Elderkin-billboard-1548-1024x677.jpg' class='d-block w-100' alt='Trending Event 1'>");
+            $("#trending").append("<img id='cImg' src='https://static.billboard.com/files/media/02-the-weeknd-press-2019-cr-Nabil-Elderkin-billboard-1548-1024x677.jpg' class='d-block w-100' alt='Trending Event 1'>");
             $("#trending").append("<div id='cCaption' class='carousel-caption d-none d-md-block'><button type='button' class='btn btn-danger btn-lg'>Search</button><p class='cText'>Checkout Trending Artists heading to the Big Apple</p></div>")
         }
     });
