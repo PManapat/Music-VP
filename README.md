@@ -29,8 +29,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut metus vesti
 ```
 Richard Capuy
 Giselle Cruz
-DJ
+Suraj Gurung
+Deepali Jain
 Phillip Manapat
-Suraj
 
 ```
