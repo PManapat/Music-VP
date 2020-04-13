@@ -11,12 +11,17 @@ $(document).ready(function() {
                 console.log(forecast)
                 console.log(forecast.list[i].main.temp);
                 console.log(forecast.list[i].main.humidity);
+
                 var utfiveday = new Date(forecast.list[i].dt*1000);
+                var utfiveday = new Date(forecast.list[i].dt_txt);
+
                 //console.log(“five day date” + utfiveday);
                 var realfiveDate = utfiveday.toLocaleDateString();
                 console.log(realfiveDate);
                 var forecastcard = $(".weather");
+
                 forecastcard.append("<div class=fiveDayColor>" + "<p>" + realfiveDate + "</p>" + `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` + "<p>" + "Temperature: " + forecast.list[i].main.temp + "</p>" + "<p>" + "Humidity: " + forecast.list[i].main.humidity + "%" + "</p>" + "</div>")
+                forecastcard.append("<div class='fiveDayColor'>" + "<p>" + realfiveDate + "</p>" + '<img src="http://openweathermap.org/img/w/"' + forecast.list[i].weather[0].icon +'.png " > <p>  Temperature: ' + forecast.list[i].main.temp + "</p>" + "<p>" + "Humidity: " + forecast.list[i].main.humidity + "%" + "</p>" + "</div>") 
             }
         }
     });

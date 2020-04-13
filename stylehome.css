@@ -10,18 +10,12 @@
 .bgcolor {
     padding: 20px;
     /* background-color:rgba(149, 172, 161, 0.589); */
-    background: url(https://openweathermap.org/themes/openweathermap/assets/img/new-history-forecast-bulk.png
-    ) no-repeat center center fixed; 
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size: cover;
     
 }
-
-
-
-
 
 .weather {
     margin-bottom: 200px;
