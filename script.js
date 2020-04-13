@@ -27,7 +27,7 @@ $(document).ready(function() {
     });
     // For carousel-begin
     $.ajax({
-        url: "http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=f35dc94b7584e054481a5dfa63bfb1c8&format=json",
+        url: "https://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=f35dc94b7584e054481a5dfa63bfb1c8&format=json",
         method: "GET"
     }).then(function (trending){
         // console.log(trending);
