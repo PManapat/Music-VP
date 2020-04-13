@@ -21,9 +21,9 @@
     margin-bottom: 200px;
 }
 /* carousel format */
-img{
+#cImg{
 	width: 100%;
-    height: 600px;
+    height: 700px;
 }
 /* carousel text */
 .cText{
