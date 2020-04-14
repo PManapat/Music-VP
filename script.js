@@ -1,17 +1,16 @@
-$(document).ready(function () {
-  //for weather
-  $.ajax({
-    url:
-      "https://api.openweathermap.org/data/2.5/forecast?q=New+York&Appid=338c0f586b9c50338b849da24ff79609&units=imperial",
-    method: "GET",
-  }).then(function (forecast) {
-    console.log(forecast);
-    for (i = 0; i < forecast.list.length; i++) {
-      if (forecast.list[i].dt_txt.indexOf("18:00:00") !== -1) {
-        console.log(forecast.list[i].dt);
-        console.log(forecast);
-        console.log(forecast.list[i].main.temp);
-        console.log(forecast.list[i].main.humidity);
+$(document).ready(function() {
+    //for weather
+    $.ajax({
+        url: "https://api.openweathermap.org/data/2.5/forecast?q=New+York&Appid=338c0f586b9c50338b849da24ff79609&units=imperial",
+        method: "GET"
+    }).then(function (forecast) {
+        // console.log(forecast);
+        for (i = 0; i < forecast.list.length; i++) {
+            if (forecast.list[i].dt_txt.indexOf("18:00:00") !== -1){
+                // console.log(forecast.list[i].dt);
+                // console.log(forecast)
+                // console.log(forecast.list[i].main.temp);
+                // console.log(forecast.list[i].main.humidity);
 
         var utfiveday = new Date(forecast.list[i].dt_txt);
 
@@ -19,7 +18,7 @@ $(document).ready(function () {
         var realfiveDate = utfiveday.toLocaleDateString();
         console.log(realfiveDate);
         var forecastcard = $(".weather");
-
+     
         forecastcard.append(
           "<div class=fiveDayColor>" +
             "<p>" +
@@ -49,13 +48,12 @@ $(document).ready(function () {
   }).then(function (trending) {
     // console.log(trending);
 
-    var topArtist = trending.artists.artist[0].name;
-    console.log(topArtist);
+        var topArtist = trending.artists.artist[0].name;
+        // console.log(topArtist);
 
     if (topArtist === "The Weeknd") {
       $("#cImg1").empty();
-      $("#cImg1").append("<img id='cImg' src='https://static.billboard.com/files/media/02-the-weeknd-press-2019-cr-Nabil-Elderkin-billboard-1548-1024x677.jpg' class='d-block w-100' alt='Trending Event 1'>"
-      );
+      $("#cImg1").append("<img id='cImg' src='https://static.billboard.com/files/media/02-the-weeknd-press-2019-cr-Nabil-Elderkin-billboard-1548-1024x677.jpg' class='d-block w-100' alt='Trending Event 1'>");
       $("#trending#cImg1").append("<div id='cCaption' class='carousel-caption d-none d-md-block'><button type='button' class='btn btn-danger btn-lg'>Search</button><p class='cText'>Checkout Trending Artists heading to the Big Apple</p></div>"
       );
     }
@@ -106,13 +104,15 @@ console.log(trending.image_url);
         method: "GET"
     }).then(function (response){
         console.log(response)
-        console.log(response._embedded.attractions[0].name);
+        // console.log(response._embedded.attractions[0].name);
         //Loop top 5 responses
         for (i =0; i < 5; i++){
             console.log(response._embedded.attractions[i].url);
             //Append top 5 responses
-            //$("#artist-modal").empty();
-            $("#artist-modal").append("<h1>").text(response._embedded.attractions[i].name);       
+            var urls = response._embedded.attractions[i].url;
+            var names = response._embedded.attractions[i].name;
+            // $("#artist-modal").empty();
+            $("#artist-modal").append("<p class = 'topArtistTix'>" + [i+1] + " <a href='" + urls + "'>" + names + "</a>");       
         }
     })   
     */
