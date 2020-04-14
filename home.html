@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Luckiest+Guy&family=Monofett&family=Ramabhadra&display=swap"
+    rel="stylesheet">
   <!-- Carousel Font -->
   <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylehome.css">
@@ -16,7 +19,7 @@
 <body>
   <div class="pos-f-t">
     <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
+      <div class="bg-transparent p-4" id="navbar">
         <h5 class="h4"><a href="#">Genre</a></h5>
         <h5 class="h4"><a href="#">Venue</a></h5>
         <h5 class="h4"><a href="#">Dates</a></h5>
@@ -29,17 +32,18 @@
       </button>
       <form class="form-inline my-2 my-lg-0">
         <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search"> -->
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Contact Us</button>
+        <button class="btn btn-outline-danger my-2 my-sm-0 text-danger" type="submit">Contact Us</button>
     </nav>
   </div>
   <div class="container mt-4 mb-4">
     <div class="card" id="about">
       <div class="card-body text-center text-white">
         <h1>Music Venue Planner</h1>
+        <p>A trip to the big apple </p>
       </div>
     </div>
   </div>
-  <div class="carousel container">
+  <div class="carousel container pb-4 pt-4">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -80,30 +84,30 @@
     </div>
   </div>
   </div>
-  <div class="cards border">
+  <div class="cards pb-4 pt-4" id="searchNowBox">
     <div class="container">
       <div class=row>
         <div class="col-sm mt-4">
-          <div class="card text-white bg-dark">
+          <div class="card text-white bg-dark" id="card1">
             <div class="card-body">
-              <h5 class="card-title pb-5 pt-5 text-center">ARTIST</h5>
-              <a href="#">Click Here!</a>
+              <h2 class="card-title pb-5 pt-5 text-center">ARTIST</h2>
+              <a href="#" class="text-white">Click Here!</a>
             </div>
           </div>
         </div>
         <div class="col-sm mt-4">
-          <div class="card text-white bg-dark">
+          <div class="card text-white bg-dark" id="card2">
             <div class="card-body">
-              <h5 class="card-title pb-5 pt-5 text-center">GENRE</h5>
-              <a href="#">Click Here!</a>
+              <h2 class="card-title pb-5 pt-5 text-center">GENRE</h2>
+              <a href="#" class="text-white">Click Here!</a>
             </div>
           </div>
         </div>
         <div class="col-sm mt-4">
-          <div class="card text-white bg-dark">
+          <div class="card text-white bg-dark" id="card3">
             <div class="card-body">
-              <h5 class="card-title pb-5 pt-5 text-center">DATES</h5>
-              <a href="#">Click Here!</a>
+              <h2 class="card-title pb-5 pt-5 text-center">DATES</h2>
+              <a href="#" class="text-white">Click Here!</a>
             </div>
           </div>
         </div>
@@ -135,7 +139,7 @@
                 </button>
               </div>
               <div class="modal-body" id="artist-modal">
-                ...
+                Top 5 Trending Artist
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -155,8 +159,8 @@
     </div>
   </div>
   <footer class="footer mt-auto py-3 bg-dark">
-    <div class="container">
-      <span class="text-muted"><a href="#">ticketmaster</a> Copyright @Project 1 </span>
+    <div class="container text-center">
+      <span class="text-white"><a href="#">ticketmaster</a> Copyright @Music VP | Project One </span>
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

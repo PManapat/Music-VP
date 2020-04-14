@@ -1,8 +1,7 @@
 $(document).ready(function () {
   //for weather
   $.ajax({
-    url:
-      "https://api.openweathermap.org/data/2.5/forecast?q=New+York&Appid=338c0f586b9c50338b849da24ff79609&units=imperial",
+    url:"https://api.openweathermap.org/data/2.5/forecast?q=New+York&Appid=338c0f586b9c50338b849da24ff79609&units=imperial",
     method: "GET",
   }).then(function (forecast) {
     // console.log(forecast);
@@ -19,6 +18,24 @@ $(document).ready(function () {
         var realfiveDate = utfiveday.toLocaleDateString();
         console.log(realfiveDate);
         var forecastcard = $(".weather");
+        
+        forecastcard.append(
+          "<div class=fiveDayColor id=fiveDaybg>" +
+            "<p>" +
+            realfiveDate +
+            "</p>" +
+            `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` +
+            "<p>" +
+            "Temperature: " +
+            forecast.list[i].main.temp +
+            "</p>" +
+            "<p>" +
+            "Humidity: " +
+            forecast.list[i].main.humidity +
+            "%" +
+            "</p>" +
+            "</div>"
+        );
       }
     }
   });
@@ -82,7 +99,7 @@ $(document).ready(function () {
       "<div id='cCaption' class='carousel-caption d-none d-md-block'><button type='button' class='btn btn-danger btn-lg'>Maroon 5</button><p class='cText'></p></div>"
     );
   });
-  console.log(trending.image_url);
+  //console.log(trending.image_url);
 });
 $(document).ready(function () {
   //Declare variables
