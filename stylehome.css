@@ -1,7 +1,7 @@
 .fiveDayColor {
     padding: 20px;
-    background-color:rgba(149, 172, 161, 0.589);
-    color:cornsilk ;
+    background-color: transparent;
+    color:black;
     float: left;
     margin: 10px;
     border: 1px solid lightgray;
@@ -20,10 +20,16 @@
 .weather {
     margin-bottom: 200px;
 }
-/* carousel format */
-#cImg{
-	width: 100%;
-    height: 700px;
+
+.carousel {
+    max-width: 700px;
+    max-height: auto;
+    overflow: hidden;
+
+}
+#about {
+    background-image: url(https://media.giphy.com/media/xVn3ZmKrKIOLS/giphy.gif);
+    background-position: fixed;
 }
 /* carousel text */
 .cText{
@@ -36,3 +42,13 @@
 #cCaption{
     align-items: left;
 }
+
+#searchcontainer {
+    background-image: url(https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2018/07/31094915/music-venue-reputation.jpg);
+    background-position: center;
+}
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
