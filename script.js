@@ -178,7 +178,6 @@ $(document).ready(function () {
                 var eventDates = response._embedded.events[i].dates.start.localDate;
                 $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + moment(eventDates).format('LL') + " : " + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></div></a>");
             } 
-        })
+        })  
     })
-    
 });
