@@ -1,0 +1,9 @@
+body {
+  /* background-color:rgba(149, 172, 161, 0.589); */
+  background: url(https://i.pinimg.com/originals/95/c4/d0/95c4d00c7870b416463823d6ac07b858.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
