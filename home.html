@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <!-- Carousel Font -->
   <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+  <!-- icons8 -->
+  <a href="https://icons8.com/icon/11821/new-ticket"></a>
   <link rel="stylesheet" href="stylehome.css">
   <title>Music VP</title>
 </head>
@@ -85,25 +87,22 @@
       <div class=row>
         <div class="col-sm mt-4">
           <div class="card text-white bg-dark">
-            <div class="card-body">
+            <div class="card-body" id="artistTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
               <h5 class="card-title pb-5 pt-5 text-center">ARTIST</h5>
-              <a href="#">Click Here!</a>
             </div>
           </div>
         </div>
         <div class="col-sm mt-4">
           <div class="card text-white bg-dark">
-            <div class="card-body">
-              <h5 class="card-title pb-5 pt-5 text-center">GENRE</h5>
-              <a href="#">Click Here!</a>
+            <div class="card-body" id="venueTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
+              <h5 class="card-title pb-5 pt-5 text-center">VENUE</h5>
             </div>
           </div>
         </div>
         <div class="col-sm mt-4">
           <div class="card text-white bg-dark">
-            <div class="card-body">
+            <div class="card-body" id="datesTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
               <h5 class="card-title pb-5 pt-5 text-center">DATES</h5>
-              <a href="#">Click Here!</a>
             </div>
           </div>
         </div>
@@ -135,11 +134,6 @@
                 </button>
               </div>
               <div class="modal-body" id="artist-modal">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
               </div>
             </div>
           </div>
