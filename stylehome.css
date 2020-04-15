@@ -125,3 +125,26 @@ border: 2px groove black;
     width: device-width ;
     zoom: 1.0 ;
   }
+
+#artist-modal{
+    background-color: whitesmoke;
+}
+
+.topTixFont{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: peru;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.topTix{
+    margin: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: bisque;
+    background-color: white;
+}
+
+.topTix:hover{
+    zoom: 115%;
+}
