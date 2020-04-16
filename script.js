@@ -51,27 +51,6 @@ $(document).ready(function () {
     }
   });
 
-  // For carousel-begin
-  /*$.ajax({
-    url:
-      "https://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=f35dc94b7584e054481a5dfa63bfb1c8&format=json",
-    method: "GET",
-  }).then(function (trending) {
-    // console.log(trending);
-
-        var topArtist = trending.artists.artist[0].name;
-        // console.log(topArtist);
-
-    if (topArtist === "The Weeknd") {
-      $("#cImg1").empty();
-      $("#cImg1").append("<img id='cImg' src='https://static.billboard.com/files/media/02-the-weeknd-press-2019-cr-Nabil-Elderkin-billboard-1548-1024x677.jpg' class='d-block w-100' alt='Trending Event 1'>");
-      $("#trending#cImg1").append("<div id='cCaption' class='carousel-caption d-none d-md-block'><button type='button' class='btn btn-danger btn-lg'>Search</button><p class='cText'>Checkout Trending Artists heading to the Big Apple</p></div>"
-      );
-    }
-  });
-  */
-  // For carousel-end
-
   var weeknd = "theweeknd";
   var billie = "billieeilish";
   var M5 = "Maroon 5";
@@ -123,124 +102,83 @@ $(document).ready(function () {
     var queryUrl = "https://app.ticketmaster.com/" + artistSearch + APIKey;
     //AJAX call ---- Name of event,artist,link,date and venue
     $.ajax({
-      url: queryUrl,
-      method: "GET",
-    }).then(function (response) {
-      // console.log(response)
-      // console.log(response._embedded.attractions[0].name);
-      $("#exampleModalLongTitle").text(
-        "Get Tix to New York City's Top Artists"
-      );
-      //Loop top 5 responses
-      for (i = 0; i < 5; i++) {
-        // console.log(response._embedded.attractions[i].url);
-        //Append top 5 responses
-        var urls = response._embedded.attractions[i].url;
-        var names = response._embedded.attractions[i].name;
-        $("#artist-modal").append(
-          "<p class = 'topArtistTix'>" +
-            [i + 1] +
-            " <a href='" +
-            urls +
-            "'>" +
-            names +
-            "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a>"
-        );
-      }
-    });
-  });
+            url: queryUrl,
+            method: "GET"
+        }).then(function (response){
+            // console.log(response)
+            // console.log(response._embedded.attractions[0].name);
+            $("#exampleModalLongTitle").text("Get Tix to New York City's Top Artists");
+            //Loop top 5 responses
+            for (i =0; i < 5; i++){
+                // console.log(response._embedded.attractions[i].url);
+                //Append top 5 responses
+                var urls = response._embedded.attractions[i].url;
+                var names = response._embedded.attractions[i].name;
+                var images = response._embedded.attractions[i].images[2].url;
+                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" + images + "'width='350px' height='175x'/></div></div></a>");       
+            }
+        })  
+    })
 
-  // Genre card click brings up modal
-  $("#venueTix").on("click", function () {
-    $("#artist-modal").empty();
+    // Venue card click brings up modal
+    $("#venueTix").on("click", function(){
+        $("#artist-modal").empty();
+        
+        //Declare variables
+        var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+        var venueSearch = "https://app.ticketmaster.com//discovery/v2/venues.json?";
+        var venueNYC = ["Madison Square Garden", "Barclays Center", "Radio City Music Hall", "Apollo Theater",  "Bowery Ballroom"];
 
-    //Declare variables
-    var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
-    var venueSearch = "https://app.ticketmaster.com//discovery/v2/venues.json?";
-    var venueNYC = [
-      "Madison Square Garden",
-      "Barclays Center",
-      "Radio City Music Hall",
-      "Apollo Theater",
-      "Bowery Ballroom",
-    ];
+        var msg = "&id=KovZpZA7AAEA";
+        var bowery = "&id=KovZpZA7dkJA";
+        var radioCity = "&id=KovZpZAE7vdA";
+        var barclays = "&id=KovZpakSbe";
+        var apollo = "&id=KovZpZA7AAIA";
 
-    var msg = "&id=KovZpZA7AAEA";
-    var bowery = "&id=KovZpZA7dkJA";
-    var radioCity = "&id=KovZpZAE7vdA";
-    var barclays = "&id=KovZpakSbe";
-    var apollo = "&id=KovZpZA7AAIA";
+        var queryUrl = venueSearch + msg + bowery + radioCity + barclays + apollo + APIKey;
 
-    var queryUrl =
-      venueSearch + msg + bowery + radioCity + barclays + apollo + APIKey;
+        $.ajax({
+            url: queryUrl,
+            method: "GET"
+        }).then(function (response){
+            // Display Modal
+            $("#exampleModalLongTitle").text("Get Tix to the TOP 5 Venues in NYC");
+            for (i = 0; i < venueNYC.length; i++){
+                var urls= response._embedded.venues[i].url;
+                var names= response._embedded.venues[i].name;
+                var images= response._embedded.venues[i].images[0].url;
+                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" + images + "'width='350px' height='175x'/></p></div></a>");
+            } 
+        })
+    })
 
-    $.ajax({
-      url: queryUrl,
-      method: "GET",
-    }).then(function (response) {
-      // Display Modal
-      $("#exampleModalLongTitle").text("Get Tix to the TOP 5 Venues in NYC");
-      for (i = 0; i < venueNYC.length; i++) {
-        var urls = response._embedded.venues[i].url;
-        var names = response._embedded.venues[i].name;
-        $("#artist-modal").append(
-          "<p class = 'topVenueTix'>" +
-            [i + 1] +
-            " <a href='" +
-            urls +
-            "'>" +
-            names +
-            "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a>"
-        );
-      }
-    });
-  });
+    // Dates card click brings up modal
+    $("#datesTix").on("click", function(){
+        $("#artist-modal").empty();
+        
+        //Declare variables
+        var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+        var venueSearch = "https://app.ticketmaster.com/discovery/v2/events";
+        // var venueNYC = ["Madison Square Garden", "Barclays Center", "Radio City Music Hall", "Apollo Theater",  "Bowery Ballroom"];
+        var today = (moment().format('YYYY-MM-DD'));
+        var plus5days = (moment().add(5, 'days').format('YYYY-MM-DD'));
 
-  // Dates card click brings up modal
-  $("#datesTix").on("click", function () {
-    $("#artist-modal").empty();
+        var queryUrl = venueSearch + APIKey + "&classificationName=music&city=new%20york&sort=date,asc" + "&startEndDateTime=" + today + "T00:00:00Z," + plus5days + "T23:59:59Z";
 
-    //Declare variables
-    var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
-    var venueSearch = "https://app.ticketmaster.com//discovery/v2/venues.json?";
-    var venueNYC = [
-      "Madison Square Garden",
-      "Barclays Center",
-      "Radio City Music Hall",
-      "Apollo Theater",
-      "Bowery Ballroom",
-    ];
-
-    var msg = "&id=KovZpZA7AAEA";
-    var bowery = "&id=KovZpZA7dkJA";
-    var radioCity = "&id=KovZpZAE7vdA";
-    var barclays = "&id=KovZpakSbe";
-    var apollo = "&id=KovZpZA7AAIA";
-
-    var queryUrl =
-      venueSearch + msg + bowery + radioCity + barclays + apollo + APIKey;
-
-    $.ajax({
-      url: queryUrl,
-      method: "GET",
-    }).then(function (response) {
-      // Display Modal
-      $("#exampleModalLongTitle").text("Get Tix to the TOP 5 Venues in NYC");
-      for (i = 0; i < venueNYC.length; i++) {
-        var urls = response._embedded.venues[i].url;
-        var names = response._embedded.venues[i].name;
-        $("#artist-modal").append(
-          "<p class = 'topVenueTix'>" +
-            [i + 1] +
-            " <a href='" +
-            urls +
-            "'>" +
-            names +
-            "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a>"
-        );
-      }
-    });
-  });
+        $.ajax({
+            url: queryUrl,
+            method: "GET"
+        }).then(function (response){
+            // Display Modal
+            $("#exampleModalLongTitle").text("Check What's Coming Up Soon in NYC");
+            for (i = 0; i < 10; i++){
+                var urls= response._embedded.events[i].url;
+                var names= response._embedded.events[i].name;
+                var eventDates = response._embedded.events[i].dates.start.localDate;
+                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + moment(eventDates).format('LL') + " : " + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></div></a>");
+            } 
+        })  
+    })
 ///
 $("#open-search").on("click", function(event){
 event.preventDefault();
