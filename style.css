@@ -27,3 +27,8 @@ html {
     margin-left: -512px;
   }
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+}
