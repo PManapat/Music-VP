@@ -34,11 +34,7 @@ $(document).ready(function () {
             "Mostly " +
             infoWeather +
             "</p>" +
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> 35b214ef197ba43041afecc0d027063ed8f19030
             `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` +
             "<p>" +
             "Temperature: " +
