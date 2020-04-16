@@ -1,7 +1,8 @@
 $(document).ready(function () {
   //for weather
   $.ajax({
-    url:"https://api.openweathermap.org/data/2.5/forecast?q=New+York&Appid=338c0f586b9c50338b849da24ff79609&units=imperial",
+    url:
+      "https://api.openweathermap.org/data/2.5/forecast?q=New+York&Appid=338c0f586b9c50338b849da24ff79609&units=imperial",
     method: "GET",
   }).then(function (forecast) {
     // console.log(forecast);
@@ -12,17 +13,26 @@ $(document).ready(function () {
         // console.log(forecast.list[i].main.temp);
         // console.log(forecast.list[i].main.humidity);
 
-        var utfiveday = new Date(forecast.list[i].dt_txt);
+        var utfiveday = new Date(forecast.list[i].dt * 1000);
+        var cityName = forecast.city.name;
 
         //console.log(“five day date” + utfiveday);
         var realfiveDate = utfiveday.toLocaleDateString();
-        console.log(realfiveDate);
+        // console.log(realfiveDate);
+        var infoWeather = forecast.list[i].weather[0].description;
         var forecastcard = $(".weather");
-        
+
         forecastcard.append(
           "<div class=fiveDayColor id=fiveDaybg>" +
             "<p>" +
+            cityName +
+            "</P>" +
+            "<p>" +
             realfiveDate +
+            "</p>" +
+            "<p>" +
+            "Mostly " +
+            infoWeather +
             "</p>" +
             `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` +
             "<p>" +
@@ -77,7 +87,7 @@ $(document).ready(function () {
   }).then(function (trending) {
     $("#cImg1").append("<img>").attr("src", trending.image_url);
     $("#trending1").append(
-      "<div id='cCaption' class='carousel-caption d-none d-md-block'><button type='button' class='btn btn-danger btn-lg'>The Weeknd</button><p class='cText'></p></div>"
+      "<div id='cCaption' class='carousel-caption d-none d-md-block'><p class='cText'>The Weeknd</p></div>"
     );
   });
 
@@ -87,7 +97,7 @@ $(document).ready(function () {
   }).then(function (trending) {
     $("#cImg2").append("<img>").attr("src", trending.image_url);
     $("#trending2").append(
-      "<div id='cCaption' class='carousel-caption d-none d-md-block'><button type='button' class='btn btn-danger btn-lg'>Billie Eilish</button><p class='cText'></p></div>"
+      "<div id='cCaption' class='carousel-caption d-none d-md-block'><p class='cText'>Billie Eilish</p></div>"
     );
   });
   $.ajax({
@@ -96,41 +106,158 @@ $(document).ready(function () {
   }).then(function (trending) {
     $("#cImg3").append("<img>").attr("src", trending.image_url);
     $("#trending3").append(
-      "<div id='cCaption' class='carousel-caption d-none d-md-block'><button type='button' class='btn btn-danger btn-lg'>Maroon 5</button><p class='cText'></p></div>"
+      "<div id='cCaption' class='carousel-caption d-none d-md-block'><p class='cText'>Maroon 5</p></div>"
     );
   });
   //console.log(trending.image_url);
-});
-$(document).ready(function () {
-  //Declare variables
-  var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
-  var artistSearch = "/discovery/v2/attractions";
-  var genreSearch = "/discovery/v2/classifications/genres/";
-  var dateSearch = "/discovery/v2/events";
-  var queryUrl = "https://app.ticketmaster.com/" + artistSearch + APIKey;
-  //AJAX call ---- Name of event,artist,link,date and venue
-  $.ajax({
-    url: queryUrl,
-    method: "GET",
-  }).then(function (response) {
-    console.log(response);
-    // console.log(response._embedded.attractions[0].name);
-    //Loop top 5 responses
-    for (i = 0; i < 5; i++) {
-      console.log(response._embedded.attractions[i].url);
-      //Append top 5 responses
-      var urls = response._embedded.attractions[i].url;
-      var names = response._embedded.attractions[i].name;
-      // $("#artist-modal").empty();
-      $("#artist-modal").append(
-        "<p class = 'topArtistTix'>" +
-          [i + 1] +
-          " <a href='" +
-          urls +
-          "'>" +
-          names +
-          "</a>"
+
+  // Artist card click brings up modal
+  $("#artistTix").on("click", function () {
+    $("#artist-modal").empty();
+    //Declare variables
+    var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+    var artistSearch = "/discovery/v2/attractions/";
+    var genreSearch = "/discovery/v2/classifications/genres/";
+    var dateSearch = "/discovery/v2/events/";
+    var queryUrl = "https://app.ticketmaster.com/" + artistSearch + APIKey;
+    //AJAX call ---- Name of event,artist,link,date and venue
+    $.ajax({
+      url: queryUrl,
+      method: "GET",
+    }).then(function (response) {
+      // console.log(response)
+      // console.log(response._embedded.attractions[0].name);
+      $("#exampleModalLongTitle").text(
+        "Get Tix to New York City's Top Artists"
       );
-    }
+      //Loop top 5 responses
+      for (i = 0; i < 5; i++) {
+        // console.log(response._embedded.attractions[i].url);
+        //Append top 5 responses
+        var urls = response._embedded.attractions[i].url;
+        var names = response._embedded.attractions[i].name;
+        $("#artist-modal").append(
+          "<p class = 'topArtistTix'>" +
+            [i + 1] +
+            " <a href='" +
+            urls +
+            "'>" +
+            names +
+            "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a>"
+        );
+      }
+    });
   });
+
+  // Genre card click brings up modal
+  $("#venueTix").on("click", function () {
+    $("#artist-modal").empty();
+
+    //Declare variables
+    var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+    var venueSearch = "https://app.ticketmaster.com//discovery/v2/venues.json?";
+    var venueNYC = [
+      "Madison Square Garden",
+      "Barclays Center",
+      "Radio City Music Hall",
+      "Apollo Theater",
+      "Bowery Ballroom",
+    ];
+
+    var msg = "&id=KovZpZA7AAEA";
+    var bowery = "&id=KovZpZA7dkJA";
+    var radioCity = "&id=KovZpZAE7vdA";
+    var barclays = "&id=KovZpakSbe";
+    var apollo = "&id=KovZpZA7AAIA";
+
+    var queryUrl =
+      venueSearch + msg + bowery + radioCity + barclays + apollo + APIKey;
+
+    $.ajax({
+      url: queryUrl,
+      method: "GET",
+    }).then(function (response) {
+      // Display Modal
+      $("#exampleModalLongTitle").text("Get Tix to the TOP 5 Venues in NYC");
+      for (i = 0; i < venueNYC.length; i++) {
+        var urls = response._embedded.venues[i].url;
+        var names = response._embedded.venues[i].name;
+        $("#artist-modal").append(
+          "<p class = 'topVenueTix'>" +
+            [i + 1] +
+            " <a href='" +
+            urls +
+            "'>" +
+            names +
+            "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a>"
+        );
+      }
+    });
+  });
+
+  // Dates card click brings up modal
+  $("#datesTix").on("click", function () {
+    $("#artist-modal").empty();
+
+    //Declare variables
+    var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+    var venueSearch = "https://app.ticketmaster.com//discovery/v2/venues.json?";
+    var venueNYC = [
+      "Madison Square Garden",
+      "Barclays Center",
+      "Radio City Music Hall",
+      "Apollo Theater",
+      "Bowery Ballroom",
+    ];
+
+    var msg = "&id=KovZpZA7AAEA";
+    var bowery = "&id=KovZpZA7dkJA";
+    var radioCity = "&id=KovZpZAE7vdA";
+    var barclays = "&id=KovZpakSbe";
+    var apollo = "&id=KovZpZA7AAIA";
+
+    var queryUrl =
+      venueSearch + msg + bowery + radioCity + barclays + apollo + APIKey;
+
+    $.ajax({
+      url: queryUrl,
+      method: "GET",
+    }).then(function (response) {
+      // Display Modal
+      $("#exampleModalLongTitle").text("Get Tix to the TOP 5 Venues in NYC");
+      for (i = 0; i < venueNYC.length; i++) {
+        var urls = response._embedded.venues[i].url;
+        var names = response._embedded.venues[i].name;
+        $("#artist-modal").append(
+          "<p class = 'topVenueTix'>" +
+            [i + 1] +
+            " <a href='" +
+            urls +
+            "'>" +
+            names +
+            "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a>"
+        );
+      }
+    });
+  });
+///
+$("#open-search").on("click", function(event){
+event.preventDefault();
+var searchInput = $("#user-input").val()
+console.log(searchInput);
+
+var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+var openSearch = "https://app.ticketmaster.com//discovery/v2/events?keyword=";
+var queryUrlS = openSearch + searchInput + APIKey;
+$.ajax({
+  url: queryUrlS,
+  method: "GET",
+}).then(function (response) {
+  console.log(response);
+console.log(response._embedded.events[0].url);
+var results = response._embedded.events[0].name;
+var ticketLink = "https://www.ticketmaster.com/search?q=";
+window.open(ticketLink + results);
+})
+})
 });
