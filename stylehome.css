@@ -1,5 +1,5 @@
 .fiveDayColor {
-    padding: 20px;
+    padding: 15px;
     background-color: transparent;
     color: white;
     float: left;
@@ -23,7 +23,7 @@ body{
     background-image: url(http://www.thenocturnaltimes.com/wp-content/uploads/2018/05/32387170_1933506876712436_7548744260711874560_o.jpg);
 }
 #fiveDaybg{
-    background-image: url(https://media.giphy.com/media/xVn3ZmKrKIOLS/giphy.gif);
+    background-image: url(https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/79099812_2500484436715953_242520121552142336_o.jpg?_nc_cat=103&_nc_sid=2d5d41&_nc_ohc=MdtiDXuPik0AX9uwmCk&_nc_ht=scontent-lga3-1.xx&oh=d93adb14147f91c67c1ba738a4635d16&oe=5EBD45E2);
     background-attachment: fixed;
 
 }
@@ -130,3 +130,27 @@ border: 2px groove black;
     width: device-width ;
     zoom: 1.0 ;
   }
+
+#artist-modal{
+    background-color: whitesmoke;
+}
+
+.topTixFont{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: peru;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.topTix{
+    margin: 20px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: bisque;
+    background-color: white;
+}
+
+.topTixFont:hover{
+    zoom: 115%;
+}
