@@ -115,12 +115,13 @@ $(document).ready(function () {
                 //Append top 5 responses
                 var urls = response._embedded.attractions[i].url;
                 var names = response._embedded.attractions[i].name;
-                $("#artist-modal").append("<p class = 'topArtistTix'>" + [i+1] + " <a href='" + urls + "'>" + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a>");       
+                var images = response._embedded.attractions[i].images[2].url;
+                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" + images + "'width='350px' height='175x'/></div></div></a>");       
             }
         })  
     })
 
-    // Genre card click brings up modal
+    // Venue card click brings up modal
     $("#venueTix").on("click", function(){
         $("#artist-modal").empty();
         
@@ -146,10 +147,10 @@ $(document).ready(function () {
             for (i = 0; i < venueNYC.length; i++){
                 var urls= response._embedded.venues[i].url;
                 var names= response._embedded.venues[i].name;
-                $("#artist-modal").append("<p class = 'topVenueTix'>" + [i+1] + " <a href='" + urls + "'>" + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a>");
+                var images= response._embedded.venues[i].images[0].url;
+                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" + images + "'width='350px' height='175x'/></p></div></a>");
             } 
         })
-        
     })
 
     // Dates card click brings up modal
@@ -157,28 +158,25 @@ $(document).ready(function () {
         $("#artist-modal").empty();
         
         //Declare variables
-        var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
-        var venueSearch = "https://app.ticketmaster.com//discovery/v2/venues.json?";
-        var venueNYC = ["Madison Square Garden", "Barclays Center", "Radio City Music Hall", "Apollo Theater",  "Bowery Ballroom"];
+        var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+        var venueSearch = "https://app.ticketmaster.com/discovery/v2/events";
+        // var venueNYC = ["Madison Square Garden", "Barclays Center", "Radio City Music Hall", "Apollo Theater",  "Bowery Ballroom"];
+        var today = (moment().format('YYYY-MM-DD'));
+        var plus5days = (moment().add(5, 'days').format('YYYY-MM-DD'));
 
-        var msg = "&id=KovZpZA7AAEA";
-        var bowery = "&id=KovZpZA7dkJA";
-        var radioCity = "&id=KovZpZAE7vdA";
-        var barclays = "&id=KovZpakSbe";
-        var apollo = "&id=KovZpZA7AAIA";
-
-        var queryUrl = venueSearch + msg + bowery + radioCity + barclays + apollo + APIKey;
+        var queryUrl = venueSearch + APIKey + "&classificationName=music&city=new%20york&sort=date,asc" + "&startEndDateTime=" + today + "T00:00:00Z," + plus5days + "T23:59:59Z";
 
         $.ajax({
             url: queryUrl,
             method: "GET"
         }).then(function (response){
             // Display Modal
-            $("#exampleModalLongTitle").text("Get Tix to the TOP 5 Venues in NYC");
-            for (i = 0; i < venueNYC.length; i++){
-                var urls= response._embedded.venues[i].url;
-                var names= response._embedded.venues[i].name;
-                $("#artist-modal").append("<p class = 'topVenueTix'>" + [i+1] + " <a href='" + urls + "'>" + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a>");
+            $("#exampleModalLongTitle").text("Check What's Coming Up Soon in NYC");
+            for (i = 0; i < 10; i++){
+                var urls= response._embedded.events[i].url;
+                var names= response._embedded.events[i].name;
+                var eventDates = response._embedded.events[i].dates.start.localDate;
+                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + moment(eventDates).format('LL') + " : " + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></div></a>");
             } 
         })  
     })
