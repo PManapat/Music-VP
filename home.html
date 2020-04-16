@@ -20,24 +20,31 @@
 </head>
 
 <body>
-  <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-transparent p-4" id="navbar">
-        <h5 class="h4"><a href="#">Genre</a></h5>
-        <h5 class="h4"><a href="#">Venue</a></h5>
-        <h5 class="h4"><a href="#">Dates</a></h5>
-      </div>
-    </div>
-    <nav class="navbar navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <form class="form-inline my-2 my-lg-0">
-        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search"> -->
-        <button class="btn btn-outline-danger my-2 my-sm-0 text-danger" type="submit">Contact Us</button>
-    </nav>
-  </div>
+  <!-- Nav starts -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="Images\Logo.png" width="50px" height="50px" alt="MVP logo" hspace="20">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+          <a  id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="navbar-toggler-icon btn-outline-danger "></span>
+          </a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+            <a class="dropdown-item btn-outline-danger" href="#">Artist</a>
+            <a class="dropdown-item btn-outline-danger" href="#">Venue</a>
+            <a class="dropdown-item btn-outline-danger" href="#">Date</a>
+            <a class="dropdown-item btn-outline-danger" href="contact.html" target=_blank>Contact Us</a>
+          </div>
+        </li>
+              </ul>
+         </div>
+  </nav>
+<!-- Nav ends -->
+
   <div class="container mt-4 mb-4">
     <div class="card" id="about">
       <div class="card-body text-center text-white">
@@ -150,11 +157,18 @@
       <div class="row weather m-auto"></div>
     </div>
   </div>
-  <footer class="footer mt-auto py-3 bg-dark">
-    <div class="container text-center">
-      <span class="text-white"><a href="#">ticketmaster</a> Copyright @Music VP | Project One </span>
-    </div>
-  </footer>
+
+  <!-- Footer Starts -->
+ <footer class="footer mt-auto py-3 bg-dark ">
+  <div class="justify-content-center">
+    <span class="text-white"> Copyright @Music VP | Social Media   </span>
+      <a href="https://www.facebook.com/" target="_blank"><img src="Images\facebook.png" alt="Facebook" width="40px" height="40px" hspan="20"></a>    
+      <a href="https://www.instagram.com/" target="_blank" ><img src="Images\instagram.png" alt="Instagram" width="40px" height="40px" hspan="20" ></a>     
+      <a href="https://twitter.com/" target="_blank"><img src="Images\twitter.png" alt="Twitter" width="40px" height="40px" hspan="20"></a>  
+      <a href="https://www.pinterest.com/" target="_blank"><img src="Images\pinterest.png" alt="Pinterest" width="40px" height="40px" hspan="20"></a>
+  </div>
+</footer>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>

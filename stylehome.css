@@ -1,4 +1,5 @@
 .fiveDayColor {
+
     padding: 10px;
     background-color: transparent;
     color: white;
@@ -40,10 +41,12 @@ body{
 .footer{
     background-image: url(https://wallpapercave.com/wp/wp2732981.png);
     background-attachment: fixed;
+
 }
 .weather {
-    margin-bottom: 200px;
+  margin-bottom: 200px;
 }
+
 #searchNowBox{
     background-image: url(https://wallpapercave.com/wp/wp2732981.png);   
     background-attachment: fixed;
@@ -74,50 +77,53 @@ background-size: cover;
 font-family: 'Luckiest Guy', cursive;
 border: 2px black;
 filter: grayscale(80%)
+
 }
 
 .carousel {
-    max-width: 600px;
-    max-height: auto;
-    overflow: hidden;
-    
-
+  max-width: 600px;
+  max-height: auto;
+  overflow: hidden;
 }
 #about {
+
     background-image: url(https://www.kbronze.com/wp-content/uploads/2014/11/pebble-background-texture-300x212.jpg);
     background-position: fixed;
     background-attachment: fixed;
     font-family: 'Luckiest Guy', cursive;
     border: 2px black;
+
 }
 
 #cImg1 {
-border: 2px groove black;
+  border: 2px groove black;
 }
 
 #cImg2 {
-    border: 2px groove black;
+  border: 2px groove black;
 }
-    
+
 #cImg3 {
-    border: 2px groove black;    
+  border: 2px groove black;
 }
-            
+
 /* carousel text */
-.cText{
-    font-size: 24px;
-    font-family: 'Overpass', sans-serif;
-    font-weight: bolder;
-    padding-top: 10px;
+.cText {
+  font-size: 24px;
+  font-family: "Overpass", sans-serif;
+  font-weight: bolder;
+  padding-top: 10px;
 }
 /* carousel caption */
-#cCaption{
-    align-items: left;
+#cCaption {
+  align-items: left;
 }
 
 #searchcontainer {
+
     background-image: url(https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2018/07/31094915/music-venue-reputation.jpg);   
     background-position: center;
+
 }
 @viewport {
     width: device-width ;

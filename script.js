@@ -1,7 +1,9 @@
 $(document).ready(function () {
   //for weather
   $.ajax({
+
     url: "https://api.openweathermap.org/data/2.5/forecast?q=New+York&Appid=338c0f586b9c50338b849da24ff79609&units=imperial",
+
     method: "GET",
   }).then(function (forecast) {
     console.log(forecast);
@@ -14,14 +16,17 @@ $(document).ready(function () {
         var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
         var utfiveday = new Date(forecast.list[i].dt * 1000);
+
         var dayName = days[utfiveday.getDay()];
         console.log(dayName);
         console.log(utfiveday);
+
         var cityName = forecast.city.name;
 
         //console.log(“five day date” + utfiveday);
         var realfiveDate = utfiveday.toLocaleDateString();
         // console.log(realfiveDate);
+
         var infoTemp = forecast.list[i].main.temp;
         var infoWeather = forecast.list[i].weather[0].description;
         console.log(infoWeather);
@@ -58,35 +63,29 @@ $(document).ready(function () {
 
 
         };
+
         var forecastcard = $(".weather");
 
         forecastcard.append(
           "<div class=fiveDayColor id=fiveDaybg>" +
+
           "<p>" + cityName + "</P>" +
           "<p>" + dayName + "</p>" +
           "<p>" +
           realfiveDate +
           "</p>" +
           "<p>" + "Mostly " + infoWeather + "<br>"+"</p>" + result1 + "<br>" +
-
           // `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` +
           "<p>" +
           "Temperature: " +
           forecast.list[i].main.temp + " °F" +
           "</p>" +
-
           "<p>" +
           result
-
           +
           "</p>" +
-
-
-
-
-
-
           "</div>"
+
         );
       }
     }

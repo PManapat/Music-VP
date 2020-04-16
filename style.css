@@ -30,3 +30,8 @@ body, h1 {
     font-size: 300%;
   }
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+}
