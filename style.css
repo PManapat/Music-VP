@@ -1,30 +1,33 @@
-button {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.about {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-html {
-  background: url(/Images/rows-red-seats-theater_53876-64710.jpg) no-repeat
-    center center fixed;
+html, body {
+  background: url(https://miro.medium.com/max/2000/1*oeEbzD8AtVeuYmDPy1MTKA.jpeg) no-repeat
+  center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+.intro{
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 25%;
+}
 
-@media screen and (max-width: 1024px) {
-  img.bg {
-    left: 50%;
-    margin-left: -512px;
+body, h1 {
+  font-size: 200%;
+  font-family: 'Ramabhadra', sans-serif;
+  text-shadow: 4px 4px black;
+  text-align: auto;
+}
+
+#inner {
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 300%;
   }
 }
 
