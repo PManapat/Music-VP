@@ -10,7 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Luckiest+Guy&family=Monofett&family=Ramabhadra&display=swap"
     rel="stylesheet">
-    <link rel = "icon" href =  "/Images/Logo.png" type = "image/x-icon">
+  <link rel="icon" href="/Images/Logo.png" type="image/x-icon">
   <!-- Carousel Font -->
   <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
   <!-- icons8 -->
@@ -55,9 +55,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active" id="trending1">
-          <img id="cImg1"
-            src="https://static.billboard.com/files/media/02-the-weeknd-press-2019-cr-Nabil-Elderkin-billboard-1548-1024x677.jpg"
-            class="d-block w-100" alt="Trending Event 1">
+          <img id="cImg1" class="d-block w-100" alt="Trending Event 1">
           <div class="carousel-caption d-none d-md-block">
           </div>
         </div>
@@ -91,21 +89,21 @@
     <div class="container">
       <div class=row>
         <div class="col-sm mt-4">
-          <div class="card text-white bg-dark">
+          <div class="card text-white bg-dark" id="card1">
             <div class="card-body" id="artistTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
               <h5 class="card-title pb-5 pt-5 text-center">ARTIST</h5>
             </div>
           </div>
         </div>
         <div class="col-sm mt-4">
-          <div class="card text-white bg-dark">
+          <div class="card text-white bg-dark" id="card2">
             <div class="card-body" id="venueTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
               <h5 class="card-title pb-5 pt-5 text-center">VENUE</h5>
             </div>
           </div>
         </div>
         <div class="col-sm mt-4">
-          <div class="card text-white bg-dark">
+          <div class="card text-white bg-dark" id="card3">
             <div class="card-body" id="datesTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
               <h5 class="card-title pb-5 pt-5 text-center">DATE</h5>
             </div>
@@ -113,13 +111,15 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="cards pb-2 pt-2 mt-5 mb-5" id="searchNowBox">
+    <h2 class="text-light" style="text-align: center;">Search for all artists</h2>
     <div class="container mt-4 mb-4" id="searchcontainer">
-      <div class="card-body text-center">
-        <form>
-          <div class="form-group">
-            <label for="openSearch"></label>
-            <input type="text" class="col-sm-6" placeholder="Search" style="text-align: center;">
-          </div>
+    <div class="card-body text-center">
+        <form id="search-form">
+          <label for="search-input"></label>
+          <input class="form col-sm-2" id="user-input" type="text" style="text-align: center;">
+          <button class="btn btn-danger btn-rounded btn-sm" id="open-search" type="submit">Search</button>
         </form>
 
         <!-- Button trigger modal -->
@@ -147,8 +147,8 @@
       </div>
     </div>
   </div>
+  
   </div>
-
   <div class="container bgcolor">
     <div class="container">
       <div class="row weather m-auto"></div>

@@ -28,23 +28,24 @@ body{
 
 }
 #navbar{
-    background-image: url(https://media.giphy.com/media/xVn3ZmKrKIOLS/giphy.gif);
+    background-image: url(https://wallpapercave.com/wp/wp2732981.png);
+    opacity: 90%;
     background-attachment: fixed;
 }    
 .navbar{
-    background-image: url(https://media.giphy.com/media/xVn3ZmKrKIOLS/giphy.gif);
+    background-image: url(https://wallpapercave.com/wp/wp2732981.png);
     background-attachment: fixed;
 }
 
 .footer{
-    background-image: url(https://media.giphy.com/media/xVn3ZmKrKIOLS/giphy.gif);
+    background-image: url(https://wallpapercave.com/wp/wp2732981.png);
     background-attachment: fixed;
 }
 .weather {
     margin-bottom: 200px;
 }
 #searchNowBox{
-    background-image: url(https://media.giphy.com/media/xVn3ZmKrKIOLS/giphy.gif);
+    background-image: url(https://wallpapercave.com/wp/wp2732981.png);   
     background-attachment: fixed;
 }
 
@@ -54,8 +55,8 @@ body{
     background-position: center;
     background-size: cover;
     font-family: 'Luckiest Guy', cursive;
-    text-shadow: -5px -5px 3px red;
     border: 2px black;
+    filter: grayscale(80%)
 }
 
 #card2{
@@ -63,8 +64,8 @@ background-image: url(https://i1.wp.com/drummagazine.com/wp-content/uploads/2017
 background-position: center;
 background-size: cover;
 font-family: 'Luckiest Guy', cursive;
-text-shadow: -5px -5px 3px red;
 border: 2px black;
+filter: grayscale(80%)
 }
 
 #card3{
@@ -72,8 +73,8 @@ background-image: url(https://seoulbeats.com/wp-content/uploads/2019/05/20190519
 background-position: center;
 background-size: cover;
 font-family: 'Luckiest Guy', cursive;
-text-shadow: -5px -5px 3px red;
 border: 2px black;
+filter: grayscale(80%)
 }
 
 .carousel {
@@ -84,7 +85,7 @@ border: 2px black;
 
 }
 #about {
-    background-image: url(https://media.giphy.com/media/xVn3ZmKrKIOLS/giphy.gif);
+    background-image: url(https://www.kbronze.com/wp-content/uploads/2014/11/pebble-background-texture-300x212.jpg);
     background-position: fixed;
     background-attachment: fixed;
     font-family: 'Luckiest Guy', cursive;
@@ -116,11 +117,9 @@ border: 2px groove black;
 }
 
 #searchcontainer {
-    background-image: url(https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2018/07/31094915/music-venue-reputation.jpg);
+    background-image: url(https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2018/07/31094915/music-venue-reputation.jpg);   
     background-position: center;
-    border: 2px black;
 }
-
 @viewport {
     width: device-width ;
     zoom: 1.0 ;
