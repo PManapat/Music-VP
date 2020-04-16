@@ -115,13 +115,13 @@ $(document).ready(function () {
                 //Append top 5 responses
                 var urls = response._embedded.attractions[i].url;
                 var names = response._embedded.attractions[i].name;
-                var images = response._embedded.attractions[i].images[0].url;
+                var images = response._embedded.attractions[i].images[2].url;
                 $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" + images + "'width='350px' height='175x'/></div></div></a>");       
             }
         })  
     })
 
-    // Genre card click brings up modal
+    // Venue card click brings up modal
     $("#venueTix").on("click", function(){
         $("#artist-modal").empty();
         
@@ -148,7 +148,7 @@ $(document).ready(function () {
                 var urls= response._embedded.venues[i].url;
                 var names= response._embedded.venues[i].name;
                 var images= response._embedded.venues[i].images[0].url;
-                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><div><img src='" + images + "'width='350px' height='175x'/></div></div></a>");
+                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" + images + "'width='350px' height='175x'/></p></div></a>");
             } 
         })
     })
@@ -172,7 +172,7 @@ $(document).ready(function () {
         }).then(function (response){
             // Display Modal
             $("#exampleModalLongTitle").text("Check What's Coming Up Soon in NYC");
-            for (i = 0; i < 20; i++){
+            for (i = 0; i < 10; i++){
                 var urls= response._embedded.events[i].url;
                 var names= response._embedded.events[i].name;
                 var eventDates = response._embedded.events[i].dates.start.localDate;

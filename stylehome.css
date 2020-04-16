@@ -138,7 +138,7 @@ border: 2px groove black;
 }
 
 .topTix{
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     border-style: solid;
     border-width: 1px;
@@ -146,6 +146,6 @@ border: 2px groove black;
     background-color: white;
 }
 
-.topTix:hover{
+.topTixFont:hover{
     zoom: 115%;
 }
