@@ -93,7 +93,7 @@ $(document).ready(function () {
 
   // Artist card click brings up modal
   $("#artistTix").on("click", function () {
-    $("#artist-modal").empty();
+    $(".modal-body").empty();
     //Declare variables
     var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
     var artistSearch = "/discovery/v2/attractions/";
@@ -115,14 +115,14 @@ $(document).ready(function () {
                 var urls = response._embedded.attractions[i].url;
                 var names = response._embedded.attractions[i].name;
                 var images = response._embedded.attractions[i].images[2].url;
-                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" + images + "'width='350px' height='175x'/></div></div></a>");       
-            }
+                $(".modal-body").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" + images + "'width='250px' height='150x'/></div></div></a>");       
+            }$(".modal-body").append("<button type='button' class='btn btn-secondary' data-dismiss='modal' align='right'>Close</button>")
         })  
     })
 
     // Venue card click brings up modal
     $("#venueTix").on("click", function(){
-        $("#artist-modal").empty();
+        $(".modal-body").empty();
         
         //Declare variables
         var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
@@ -147,19 +147,22 @@ $(document).ready(function () {
                 var urls= response._embedded.venues[i].url;
                 var names= response._embedded.venues[i].name;
                 var images= response._embedded.venues[i].images[0].url;
-                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" + images + "'width='350px' height='175x'/></p></div></a>");
+                $(".modal-body").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + names + " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" + images + "'width='250px' height='150x'/></p></div></a>");
             } 
+            $(".modal-body").append("<button type='button' class='btn btn-secondary' data-dismiss='modal' align='right'>Close</button>")
         })
     })
 
     // Dates card click brings up modal
     $("#datesTix").on("click", function(){
-        $("#artist-modal").empty();
+        $(".modal-body").empty();
+        $(".modal-body").append("<table id='modal-table'>");
+        $("#modal-table").append("<tr><th id='modal-table-header'>Date</th><th>Event</th></tr>");
+
         
         //Declare variables
         var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
         var venueSearch = "https://app.ticketmaster.com/discovery/v2/events";
-        // var venueNYC = ["Madison Square Garden", "Barclays Center", "Radio City Music Hall", "Apollo Theater",  "Bowery Ballroom"];
         var today = (moment().format('YYYY-MM-DD'));
         var plus5days = (moment().add(5, 'days').format('YYYY-MM-DD'));
 
@@ -175,8 +178,8 @@ $(document).ready(function () {
                 var urls= response._embedded.events[i].url;
                 var names= response._embedded.events[i].name;
                 var eventDates = response._embedded.events[i].dates.start.localDate;
-                $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + moment(eventDates).format('LL') + " : " + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></div></a>");
-            } 
+                $("#modal-table").append("<tr><td>" + moment(eventDates).format('LL') + "</td><td><a class= 'topTixFont' target='_blank' href='" + urls + "'>" + names + " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a></td></tr>");
+            } $(".modal-body").append("<button type='button' class='btn btn-secondary' data-dismiss='modal' align='right'>Close</button><tr>")
         })  
     })
 ///
