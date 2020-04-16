@@ -12,7 +12,7 @@ $(document).ready(function () {
         // console.log(forecast)
         // console.log(forecast.list[i].main.temp);
         // console.log(forecast.list[i].main.humidity);
-
+        
         var utfiveday = new Date(forecast.list[i].dt * 1000);
         var cityName = forecast.city.name;
 
@@ -22,7 +22,7 @@ $(document).ready(function () {
         var infoWeather = forecast.list[i].weather[0].description;
         var forecastcard = $(".weather");
 
-        forecastcard.append(
+         forecastcard.append(
           "<div class=fiveDayColor id=fiveDaybg>" +
             "<p>" +
             cityName +
@@ -34,6 +34,7 @@ $(document).ready(function () {
             "Mostly " +
             infoWeather +
             "</p>" +
+
             `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` +
             "<p>" +
             "Temperature: " +
