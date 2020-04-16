@@ -51,30 +51,36 @@ body{
 
 
 #card1{
-    background-image: url(https://consequenceofsound.net/wp-content/uploads/2019/11/post-malone-2020-runaway-tour-dates-tickets.png?w=807);
-    background-position: center;
-    background-size: cover;
-    font-family: 'Luckiest Guy', cursive;
-    border: 2px black;
-    filter: grayscale(80%)
+background-image: url(https://consequenceofsound.net/wp-content/uploads/2019/11/post-malone-2020-runaway-tour-dates-tickets.png?w=807);
+background-position: center;
+background-size: cover;
+font-family: 'IBM Plex Mono', cursive;
+border: 2px black;
+filter: grayscale(50%);
+-webkit-text-stroke-width: 1.5px;
+-webkit-text-stroke-color: black;
 }
 
 #card2{
 background-image: url(https://i1.wp.com/drummagazine.com/wp-content/uploads/2017/11/Mona-Tavakoli-FEATURED-WEB.jpg?fit=1500%2C750&ssl=1);
 background-position: center;
 background-size: cover;
-font-family: 'Luckiest Guy', cursive;
+font-family: 'IBM Plex Mono', cursive;
 border: 2px black;
-filter: grayscale(80%)
+filter: grayscale(50%);
+-webkit-text-stroke-width: 1.5px;
+-webkit-text-stroke-color: black;
 }
 
 #card3{
 background-image: url(https://seoulbeats.com/wp-content/uploads/2019/05/20190519_seoulbeats_blackpink-384x253.jpg);
 background-position: center;
 background-size: cover;
-font-family: 'Luckiest Guy', cursive;
+font-family: 'IBM Plex Mono', cursive, bold;
 border: 2px black;
-filter: grayscale(80%)
+filter: grayscale(50%);
+-webkit-text-stroke-width: 1.5px;
+-webkit-text-stroke-color:black;
 }
 
 .carousel {

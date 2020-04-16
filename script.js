@@ -34,6 +34,7 @@ $(document).ready(function () {
             "Mostly " +
             infoWeather +
             "</p>" +
+            
             `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` +
             "<p>" +
             "Temperature: " +

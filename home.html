@@ -35,16 +35,15 @@
       </button>
       <form class="form-inline my-2 my-lg-0">
         <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search"> -->
-        <button class="btn btn-outline-danger my-2 my-sm-0 text-danger" type="submit">Contact Us</button>
+        <button class="btn btn-outline-danger my-2 my-sm-0 text-danger mr-2" type="button" onclick="window.location.href='AboutUs.html'" >Meet The Team</button>
+        <button class="btn btn-outline-danger my-2 my-sm-0 text-danger" type="button" onclick="window.location.href='contact.html'" >Contact Us</button>
     </nav>
   </div>
-  <div class="container mt-4 mb-4">
     <div class="card" id="about">
       <div class="card-body text-center text-white">
         <h1>Music Venue Planner</h1>
         <p>A trip to the big apple </p>
       </div>
-    </div>
   </div>
   <div class="carousel container pb-4 pt-4">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
@@ -86,24 +85,24 @@
   </div>
   </div>
   <div class="cards pb-4 pt-4" id="searchNowBox">
+    <h2 class="text-light" style="text-align: center;">Discover the trending top artist</h2>
     <div class="container">
       <div class=row>
-        <div class="col-sm mt-4">
+        <div class="col-sm mt-4 mb-4">
           <div class="card text-white bg-dark" id="card1">
             <div class="card-body" id="artistTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
-              <h5 class="card-title pb-5 pt-5 text-center">ARTIST</h5>
+              <h5 class="card-title pb-5 pt-5 text-center">ARTISTS</h5>
             </div>
           </div>
         </div>
-        <div class="col-sm mt-4">
+        <div class="col-sm mt-4 mb-4">
           <div class="card text-white bg-dark" id="card2">
             <div class="card-body" id="venueTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
-              <h5 class="card-title pb-5 pt-5 text-center">VENUE</h5>
-
+              <h5 class="card-title pb-5 pt-5 text-center">VENUES</h5>
             </div>
           </div>
         </div>
-        <div class="col-sm mt-4">
+        <div class="col-sm mt-4 mb-4">
           <div class="card text-white bg-dark" id="card3">
             <div class="card-body" id="datesTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
               <h5 class="card-title pb-5 pt-5 text-center">DATES</h5>
@@ -114,7 +113,7 @@
     </div>
   </div>
   <div class="cards pb-2 pt-2 mt-5 mb-5" id="searchNowBox">
-    <h2 class="text-light" style="text-align: center;">Search for all artists</h2>
+    <h2 class="text-light" style="text-align: center;">Search for all artist</h2>
     <div class="container mt-4 mb-4" id="searchcontainer">
     <div class="card-body text-center">
         <form id="search-form">
@@ -122,11 +121,13 @@
           <input class="form col-sm-2" id="user-input" type="text" style="text-align: center;">
           <button class="btn btn-danger btn-rounded btn-sm" id="open-search" type="submit">Search</button>
         </form>
+      </div>
     </div>
   </div>
+  
   </div>
   <div class="container bgcolor">
-    <div class="container">
+    <h2 class="text-light" style="text-align: center;">Plan with the weather
       <div class="row weather m-auto"></div>
     </div>
   </div>
@@ -138,6 +139,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
   <script src="script.js"></script>
 </body>
 
