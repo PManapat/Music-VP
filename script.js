@@ -35,8 +35,8 @@ $(document).ready(function () {
         var short = `<img src="https://img.icons8.com/plasticine/100/000000/clothes.png"/>`;
         var rainyDay = `<img src="https://lathompson.co.nz/wp-content/uploads/2019/09/Its-Raining.jpg"width=100px height=100px/>`;
         var coldDayCloud=`<img src="https://besthqwallpapers.com/img/original/51113/brooklyn-bridge-new-york-world-trade-center-1-usa-skyscrapers.jpg" width=120px height=  80px`;
-        var coldDay = `<img src="https://s1.1zoom.me/big0/813/USA_Bridges_Houses_Brooklyn_New_York_City_529472_1280x857.jpg" width=120px height=80px`;
-        var sunny = `<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1449910230000/photosp/1b191d15-157a-44a0-84f4-bbf7126d504b/stock-photo-skyline-leaves-fall-sunny-nyc-iphone-centralpark-sheeps-meadows-1b191d15-157a-44a0-84f4-bbf7126d504b.jpg" width=120px height=60px/>`;
+        var coldDay = `<img src="https://s1.1zoom.me/big0/813/USA_Bridges_Houses_Brooklyn_New_York_City_529472_1280x857.jpg" width=100px height=100px`;
+        var sunny = `<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1449910230000/photosp/1b191d15-157a-44a0-84f4-bbf7126d504b/stock-photo-skyline-leaves-fall-sunny-nyc-iphone-centralpark-sheeps-meadows-1b191d15-157a-44a0-84f4-bbf7126d504b.jpg" width=100px height=100px/>`;
         var umbrella = ` <img src="https://img.icons8.com/dusk/64/000000/umbrella.png"/>
         `;
         var winter = `<img src="https://img.icons8.com/ultraviolet/80/000000/jacket.png"/>`;
@@ -93,7 +93,7 @@ $(document).ready(function () {
 
 
   ///when clicked the weather card it shows the next five days event of modal.
-  $(".weather").click(function (event) {
+ /* $(".weather").click(function (event) {
    event.preventDefault();
 //    alert("i am clicked");
 $("#datesTix").click();
@@ -121,20 +121,15 @@ $("#datesTix").click();
         var names = response._embedded.events[i].name;
         var eventDates = response._embedded.events[i].dates.start.localDate;
         $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + moment(eventDates).format('LL') + " : " + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></div></a>");
-
-
-
-
-
       }
 
-
     });
-  });
+  });*/
+
 //want to put hover effect
-  $("#weather").text.hover(function(){
-      $(this).fadeOut(1);
-     $(this).fadeIn(1);
+  //$("#weather").text.hover(function(){
+    //  $(this).fadeOut(1);
+    // $(this).fadeIn(1);
 
 
 
@@ -177,9 +172,7 @@ $("#datesTix").click();
     );
   });
   //console.log(trending.image_url);
-
-  // Artist card click brings up modal
-  $("#artistTix").on("click", function () {
+$("#artistTix").on("click", function(){
     $(".modal-body").empty();
     //Declare variables
     var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
@@ -269,7 +262,7 @@ $("#datesTix").click();
             } $(".modal-body").append("<button type='button' class='btn btn-secondary' data-dismiss='modal' align='right'>Close</button><tr>")
         })  
     })
-///
+/// Search function with Ajax ca
 $("#open-search").on("click", function(event){
 event.preventDefault();
 var searchInput = $("#user-input").val()
@@ -290,4 +283,4 @@ window.open(ticketLink + results);
 })
 })
 });
-});
+//});

@@ -28,11 +28,7 @@ body{
     background-attachment: fixed;
 
 }
-#navbar{
-    background-image: url(https://wallpapercave.com/wp/wp2732981.png);
-    opacity: 90%;
-    background-attachment: fixed;
-}    
+   
 .navbar{
     background-image: url(https://wallpapercave.com/wp/wp2732981.png);
     background-attachment: fixed;
@@ -41,8 +37,10 @@ body{
 .footer{
     background-image: url(https://wallpapercave.com/wp/wp2732981.png);
     background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+  }
 
-}
 .weather {
   margin-bottom: 200px;
 }
@@ -50,7 +48,10 @@ body{
 #searchNowBox{
     background-image: url(https://wallpapercave.com/wp/wp2732981.png);   
     background-attachment: fixed;
+    padding-top: 50px;
+    padding-bottom: 70px;
 }
+
 
 #card1{
 
@@ -173,6 +174,7 @@ filter: grayscale(50%);
     border-width: 1px;
     border-color: peru;
     background-color: rgb(34, 34, 34);
+    
 }
 
 .topTix:hover{
