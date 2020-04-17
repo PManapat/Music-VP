@@ -34,7 +34,7 @@ $(document).ready(function () {
         console.log(apparelInfo);
         var short = `<img src="https://img.icons8.com/plasticine/100/000000/clothes.png"/>`;
         var rainyDay = `<img src="https://lathompson.co.nz/wp-content/uploads/2019/09/Its-Raining.jpg"width=100px height=100px/>`;
-        var coldDayCloud=`<img src="https://besthqwallpapers.com/img/original/51113/brooklyn-bridge-new-york-world-trade-center-1-usa-skyscrapers.jpg" width=120px height=  80px`;
+        var coldDayCloud=`<img src="https://besthqwallpapers.com/img/original/51113/brooklyn-bridge-new-york-world-trade-center-1-usa-skyscrapers.jpg" width=100px height=  100px`;
         var coldDay = `<img src="https://s1.1zoom.me/big0/813/USA_Bridges_Houses_Brooklyn_New_York_City_529472_1280x857.jpg" width=100px height=100px`;
         var sunny = `<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1449910230000/photosp/1b191d15-157a-44a0-84f4-bbf7126d504b/stock-photo-skyline-leaves-fall-sunny-nyc-iphone-centralpark-sheeps-meadows-1b191d15-157a-44a0-84f4-bbf7126d504b.jpg" width=100px height=100px/>`;
         var umbrella = ` <img src="https://img.icons8.com/dusk/64/000000/umbrella.png"/>
@@ -74,7 +74,7 @@ $(document).ready(function () {
           "<p>" +
           realfiveDate +
           "</p>" +
-          "<p>" + "Mostly " + infoWeather + "<br>"+"</p>" + result1 + "<br>" +
+          "<p>" + infoWeather + "<br>"+"</p>" + result1 + "<br>" +
           // `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` +
           "<p>" +
           "Temperature: " +
@@ -97,18 +97,14 @@ $(document).ready(function () {
    event.preventDefault();
 //    alert("i am clicked");
 $("#datesTix").click();
-
     $("#artist-modal").empty();
-
     //Declare variables
     var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
     var venueSearch = "https://app.ticketmaster.com/discovery/v2/events";
     // var venueNYC = ["Madison Square Garden", "Barclays Center", "Radio City Music Hall", "Apollo Theater",  "Bowery Ballroom"];
     var today = (moment().format('YYYY-MM-DD'));
     var plus5days = (moment().add(5, 'days').format('YYYY-MM-DD'));
-
     var queryUrl = venueSearch + APIKey + "&classificationName=music&city=new%20york&sort=date,asc" + "&startEndDateTime=" + today + "T00:00:00Z," + plus5days + "T23:59:59Z";
-
     $.ajax({
       url: queryUrl,
       method: "GET"
@@ -122,7 +118,6 @@ $("#datesTix").click();
         var eventDates = response._embedded.events[i].dates.start.localDate;
         $("#artist-modal").append("<a class= 'topTixFont' target='_blank' href='" + urls + "'><div class = 'topTix'>" + moment(eventDates).format('LL') + " : " + names + "<img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></div></a>");
       }
-
     });
   });*/
 

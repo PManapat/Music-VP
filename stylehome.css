@@ -21,12 +21,12 @@
 body{
     background-attachment: fixed;
     background-size: cover;
-    background-image: url(http://www.thenocturnaltimes.com/wp-content/uploads/2018/05/32387170_1933506876712436_7548744260711874560_o.jpg);
+    background-image: url(https://www.thenocturnaltimes.com/wp-content/uploads/2018/05/32387170_1933506876712436_7548744260711874560_o.jpg);
 }
 #fiveDaybg{
-    background-image: url(https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/79099812_2500484436715953_242520121552142336_o.jpg?_nc_cat=103&_nc_sid=2d5d41&_nc_ohc=MdtiDXuPik0AX9uwmCk&_nc_ht=scontent-lga3-1.xx&oh=d93adb14147f91c67c1ba738a4635d16&oe=5EBD45E2);
+    background-image: url(https://t4.ftcdn.net/jpg/01/16/88/37/240_F_116883786_wuckft1sNw1ouQfJ6FuquZnxea3qBlxy.jpg);
     background-attachment: fixed;
-
+    background-size: cover;
 }
    
 .navbar{
@@ -54,7 +54,6 @@ body{
 
 
 #card1{
-
 background-image: url(https://consequenceofsound.net/wp-content/uploads/2019/11/post-malone-2020-runaway-tour-dates-tickets.png?w=807);
 background-position: center;
 background-size: cover;
@@ -94,8 +93,8 @@ filter: grayscale(50%);
   max-height: auto;
   overflow: hidden;
 }
-#about {
 
+#about {
     background-image: url(https://www.kbronze.com/wp-content/uploads/2014/11/pebble-background-texture-300x212.jpg);
     background-position: fixed;
     background-attachment: fixed;
@@ -129,9 +128,9 @@ filter: grayscale(50%);
 }
 
 #searchcontainer {
-
     background-image: url(https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2018/07/31094915/music-venue-reputation.jpg);   
     background-position: center;
+    height: 130px;
 
 }
 @viewport {
