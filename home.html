@@ -20,31 +20,38 @@
 </head>
 
 <body>
-  <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-transparent p-4" id="navbar">
-        <h5 class="h4"><a href="#">Genre</a></h5>
-        <h5 class="h4"><a href="#">Venue</a></h5>
-        <h5 class="h4"><a href="#">Dates</a></h5>
-      </div>
+  <!-- Nav starts -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="Images\Logo.png" width="50px" height="50px" alt="MVP logo" hspace="20">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="navbar-toggler-icon btn-outline-danger "></span>
+          </a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+            <a class="dropdown-item btn-outline-danger" id="artistTix1">Artist</a>
+            <a class="dropdown-item btn-outline-danger" href="#">Venue</a>
+            <a class="dropdown-item btn-outline-danger" href="#">Date</a>
+            <a class="dropdown-item btn-outline-danger" href="AboutUs.html">Meet The Team</a>
+            <a class="dropdown-item btn-outline-danger" href="contact.html">Contact Us</a>
+          </div>
+        </li>
+      </ul>
     </div>
-    <nav class="navbar navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <form class="form-inline my-2 my-lg-0">
-        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search"> -->
-        <button class="btn btn-outline-danger my-2 my-sm-0 text-danger mr-2" type="button"
-          onclick="window.location.href='AboutUs.html'">Meet The Team</button>
-        <button class="btn btn-outline-danger my-2 my-sm-0 text-danger" type="button"
-          onclick="window.location.href='contact.html'">Contact Us</button>
-    </nav>
-  </div>
-  <div class="card" id="about">
-    <div class="card-body text-center text-white">
-      <h1>Music Venue Planner</h1>
-      <p>A trip to the big apple </p>
+  </nav>
+  <!-- Nav ends -->
+  <div class="container mt-4 mb-4">
+    <div class="card" id="about">
+      <div class="card-body text-center text-white">
+        <h1>Music Venue Planner</h1>
+        <p>A trip to the big apple </p>
+      </div>
     </div>
   </div>
   <div class="carousel container pb-4 pt-4">
@@ -86,38 +93,8 @@
     </div>
   </div>
   </div>
-  <div class="cards pb-4 pt-4" id="searchNowBox">
-    <h2 class="text-light" style="text-align: center;">Discover the trending top artist</h2>
-    <div class="container">
-        <h2 class="text-light" style="text-align: center; color:goldenrod;">The Best Musical Events are ALWAYS in NYC</h2>
-        <h5 class="text-light" style="text-align: center;">See who is performing where next</h5>
-      <div class="row">
-        <div class="col-sm mt-4">
-          <div class="card text-white bg-dark" id="card1">
-            <div class="card-body" id="artistTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
-              <h5 class="card-title pb-5 pt-5 text-center">ARTISTS</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm mt-4 mb-4">
-          <div class="card text-white bg-dark" id="card2">
-            <div class="card-body" id="venueTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
-              <h5 class="card-title pb-5 pt-5 text-center">VENUES</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm mt-4 mb-4">
-          <div class="card text-white bg-dark" id="card3">
-            <div class="card-body" id="datesTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
-              <h5 class="card-title pb-5 pt-5 text-center">DATES</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="cards pb-2 pt-2 mt-5 mb-5" id="searchNowBox">
-    <h2 class="text-light" style="text-align: center;">Search for all artist</h2>
+  <div class="cards mt-5 mb-5" id="searchNowBox">
+    <h2 class="text-light" style="text-align: center;">Search for all artists</h2>
     <div class="container mt-4 mb-4" id="searchcontainer">
       <div class="card-body text-center">
         <form id="search-form">
@@ -128,41 +105,71 @@
       </div>
     </div>
   </div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
-  aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body" id="artist-modal">
+  <div class="container bgcolor">
+    <div class="container">
+      <div class="row weather m-auto"></div>
+    </div>
+  </div>
+  <div class="cards pb-6 pt-4 mb-12" id="searchNowBox">
+    <div class="container">
+      <h2 class="text-light" style="text-align: center; color:goldenrod;">The Best Musical Events are ALWAYS in NYC</h2>
+      <h5 class="text-light" style="text-align: center;">See who is performing where next</h5>
+      <div class="row">
+        <div class="col-sm mt-4">
+          <div class="card text-white bg-dark" id="card1">
+            <div class="card-body" id="artistTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
+              <h5 class="card-title pb-5 pt-5 text-center">ARTIST</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm mt-4">
+          <div class="card text-white bg-dark" id="card2">
+            <div class="card-body" id="venueTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
+              <h5 class="card-title pb-5 pt-5 text-center">VENUE</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm mt-4">
+          <div class="card text-white bg-dark" id="card3">
+            <div class="card-body" id="datesTix" type="button" data-toggle="modal" data-target="#exampleModalLong">
+              <h5 class="card-title pb-5 pt-5 text-center">DATE</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Top 5 Trending Artist
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-  </div>
-  <div class="container bgcolor">
-    <h2 class="text-light" style="text-align: center;">Plan with the weather
-      <div class="row weather m-auto"></div>
-  </div>
-  </div>
-
-  <!-- Footer Starts -->
- <footer class="footer mt-auto py-3 bg-dark ">
-  <div class="justify-content-center">
-    <span class="text-white"> Copyright @Music VP | Social Media   </span>
-      <a href="https://www.facebook.com/" target="_blank"><img src="Images\facebook.png" alt="Facebook" width="40px" height="40px" hspan="20"></a>    
-      <a href="https://www.instagram.com/" target="_blank" ><img src="Images\instagram.png" alt="Instagram" width="40px" height="40px" hspan="20" ></a>     
-      <a href="https://twitter.com/" target="_blank"><img src="Images\twitter.png" alt="Twitter" width="40px" height="40px" hspan="20"></a>  
-      <a href="https://www.pinterest.com/" target="_blank"><img src="Images\pinterest.png" alt="Pinterest" width="40px" height="40px" hspan="20"></a>
-  </div>
-</footer>
-
+    <!-- Footer Starts -->
+    <footer class="footer mt-auto py-3 bg-dark ">
+      <div class="justify-content-center">
+          <span class="text-white"> Copyright @Music VP | Social Media </span>
+          <a href="https://www.facebook.com/" target="_blank"><img src="Images\facebook.png" alt="Facebook"
+                  width="40px" height="40px" hspan="20"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="Images\instagram.png" alt="Instagram"
+                  width="40px" height="40px" hspan="20"></a>
+          <a href="https://twitter.com/" target="_blank"><img src="Images\twitter.png" alt="Twitter" width="40px"
+                  height="40px" hspan="20"></a>
+          <a href="https://www.pinterest.com/" target="_blank"><img src="Images\pinterest.png" alt="Pinterest"
+                  width="40px" height="40px" hspan="20"></a>
+      </div>
+  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>

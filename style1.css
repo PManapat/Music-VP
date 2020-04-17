@@ -8,8 +8,13 @@ body {
   background-size: cover;
 }
 
+.navbar{
+  background-image: url(https://wallpapercave.com/wp/wp2732981.png);
+  background-attachment: fixed;
+}
 
 footer {
+  background-image: url(https://wallpapercave.com/wp/wp2732981.png);
   display: flex;
   justify-content: center;
 }

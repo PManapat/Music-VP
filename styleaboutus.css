@@ -11,9 +11,8 @@
 .footer {
   background-image: url(https://wallpapercave.com/wp/wp2732981.png);
   background-attachment: fixed;
-  position: absolute;
-  bottom: auto;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 body {
