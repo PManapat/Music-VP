@@ -24,9 +24,9 @@
             <span class="navbar-toggler-icon btn-outline-danger "></span>
           </a>
           <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-            <a class="dropdown-item btn-outline-danger" href="home.html">Artist</a>
-            <a class="dropdown-item btn-outline-danger" href="home.html">Venue</a>
-            <a class="dropdown-item btn-outline-danger" href="home.html">Date</a>
+            <a class="dropdown-item btn-outline-danger" href="#" id="artistTix" type="button" data-toggle="modal" data-target="#exampleModalLong">Artists</a>
+            <a class="dropdown-item btn-outline-danger" href="#" id="venueTix" type="button" data-toggle="modal" data-target="#exampleModalLong">Venues</a>
+            <a class="dropdown-item btn-outline-danger" href="#" id="datesTix" type="button" data-toggle="modal" data-target="#exampleModalLong">Dates</a>
             <a class="dropdown-item btn-outline-danger" href="home.html">Home</a>
           </div>
         </li>
@@ -50,24 +50,24 @@
                 <label for="exampleFormControlTextarea1">Your message</label>
                 <textarea class="form-control" rows="3"></textarea>
             </div>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalLong">
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contact-modal">
               Submit</button>
         </form>
     </div>
    
     
  <!-- Modal Starts -->
- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
- aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+ <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog"
+ aria-labelledby="contact-title" aria-hidden="true">
  <div class="modal-dialog" role="document">
    <div class="modal-content">
      <div class="modal-header">
-       <h5 class="modal-title" id="exampleModalLongTitle">Contact Us</h5>
+       <h5 class="modal-title" id="contact-title">Contact Us</h5>
        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
          <span aria-hidden="true">&times;</span>
        </button>
      </div>
-     <div class="modal-body" id="artist-modal">
+     <div class="modal-body">
        Thank you for reaching out to us! 
        We are currently working on this feature and you can see the enhancement in the next phase.
      </div>
@@ -76,10 +76,30 @@
        </div>
    </div>
  </div>
-</div>
+</div> 
  <!-- Modal Ends -->
- <div>
- </div>
+ 
+
+
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <div class="modal-body">
+           Top 5 Trending Artist
+         </div>
+       </div>
+     </div>
+   </div>
+
+
 
  <!-- Footer Starts -->
  <footer class="footer mt-auto py-3 bg-dark ">
@@ -91,8 +111,10 @@
       <a href="https://www.pinterest.com/" target="_blank"><img src="Images\pinterest.png" alt="Pinterest" width="40px" height="40px" hspan="20"></a>
 </div>
 </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="script.js"></script>
     </body>
 </html>
