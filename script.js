@@ -231,9 +231,9 @@ $("#artistTix").on("click", function(){
     // Dates card click brings up modal
     $("#datesTix").on("click", function(){
         $(".modal-body").empty();
-        $(".modal-body").append("<table id='modal-table'>");
-        $("#modal-table").append("<tr><th id='modal-table-header'>Date</th><th>Event</th></tr>");
-
+        $(".modal-body").append("<div id='table-wrapper'><div id='table-scroll'><table id='modal-table'>");
+        $("#modal-table").append("<thead><tr class='modal-table-header'><th>Date</th><th>Event</th></tr></thead>");
+        $("#modal-table").append("<tbody>");
         
         //Declare variables
         var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
@@ -249,7 +249,7 @@ $("#artistTix").on("click", function(){
         }).then(function (response){
             // Display Modal
             $("#exampleModalLongTitle").text("Check What's Coming Up Soon in NYC");
-            for (i = 0; i < 10; i++){
+            for (i = 0; i < 20; i++){
                 var urls= response._embedded.events[i].url;
                 var names= response._embedded.events[i].name;
                 var eventDates = response._embedded.events[i].dates.start.localDate;
