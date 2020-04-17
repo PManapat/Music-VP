@@ -1,12 +1,12 @@
 .fiveDayColor {
 
-    padding: 10px;
     background-color: transparent;
     color: white;
     float: left;
-    margin: 10px;
-    border: 1px solid lightgray;
-    font-family: 'IBM Plex Mono', monospace;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10%;
+    font-family: 'Ramabhadra', sans-serif;
     font-size: small;
 }
 
@@ -24,7 +24,7 @@ body{
     background-image: url(https://www.thenocturnaltimes.com/wp-content/uploads/2018/05/32387170_1933506876712436_7548744260711874560_o.jpg);
 }
 #fiveDaybg{
-    background-image: url(https://t4.ftcdn.net/jpg/01/16/88/37/240_F_116883786_wuckft1sNw1ouQfJ6FuquZnxea3qBlxy.jpg);
+    background-image: url(https://wallpapercave.com/wp/wp2732981.png);
     background-attachment: fixed;
     background-size: cover;
 }
