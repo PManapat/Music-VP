@@ -32,14 +32,14 @@ $(document).ready(function () {
         console.log(infoWeather);
         var apparelInfo = forecast.list[i].weather[0].main;
         console.log(apparelInfo);
-        var short = `<img src="https://img.icons8.com/plasticine/100/000000/clothes.png"/>`;
+        var short = `<img src="https://clipartart.com/images250_/t-shirt-png-transparent-clipart-3.png"width=80px height=80px/>`;
         var rainyDay = `<img src="https://lathompson.co.nz/wp-content/uploads/2019/09/Its-Raining.jpg"width=100px height=100px/>`;
         var coldDayCloud=`<img src="https://besthqwallpapers.com/img/original/51113/brooklyn-bridge-new-york-world-trade-center-1-usa-skyscrapers.jpg" width=100px height=  100px`;
         var coldDay = `<img src="https://s1.1zoom.me/big0/813/USA_Bridges_Houses_Brooklyn_New_York_City_529472_1280x857.jpg" width=100px height=100px`;
         var sunny = `<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1449910230000/photosp/1b191d15-157a-44a0-84f4-bbf7126d504b/stock-photo-skyline-leaves-fall-sunny-nyc-iphone-centralpark-sheeps-meadows-1b191d15-157a-44a0-84f4-bbf7126d504b.jpg" width=100px height=100px/>`;
-        var umbrella = ` <img src="https://img.icons8.com/dusk/64/000000/umbrella.png"/>
+        var umbrella = ` <img src="/Images/umbrella.png"width=80px height=80px'/>
         `;
-        var winter = `<img src="https://img.icons8.com/ultraviolet/80/000000/jacket.png"/>`;
+        var winter = `<img src="/Images/Jacket.png"width=80px height=80px/>`;
         var result = "";
         var result1 = "";
 
@@ -50,7 +50,7 @@ $(document).ready(function () {
           result1 = rainyDay;
           console.log(short);
         } else if (infoTemp >= 55 ) {
-          result = ("Stay Hydrated " + "<br>" + short);
+          result = ("Stay light " + "<br>" + short);
           result1 = sunny;
 
         } else if (infoTemp < 55 &&infoWeather==="clear sky") {
@@ -67,7 +67,7 @@ $(document).ready(function () {
         var forecastcard = $(".weather");
 
         forecastcard.append(
-          "<div class=fiveDayColor id=fiveDaybg>" +
+          "<div class=fiveDayColor id=fiveDaybg style='text-align:center'>" +
 
           "<p>" + cityName + "</P>" +
           "<p>" + dayName + "</p>" +
