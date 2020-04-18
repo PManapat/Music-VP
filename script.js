@@ -318,6 +318,7 @@ $("#datesTix").click();
       );
     });
   });
+
   /// Search function with Ajax ca
   $("#open-search").on("click", function (event) {
     event.preventDefault();
@@ -342,5 +343,17 @@ $("#datesTix").click();
       });
     }
   });
+  $("#artistId").click(function(event){
+    event.preventDefault();
+    $("#artistTix").click();
+  })
+  $("#venueId").click(function(event){
+    event.preventDefault();
+    $("#venueTix").click();
+  })
+  $("#datesId").click(function(event){
+    event.preventDefault();
+    $("#datesTix").click();
+  })
 });
 //});

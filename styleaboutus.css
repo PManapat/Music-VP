@@ -81,6 +81,7 @@ body {
 .modal-body{
     background-color: rgb(2, 2, 2);
     border-style: none;
+    align-content: center;
 }
 
 .modal-footer{

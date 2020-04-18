@@ -44,6 +44,15 @@ footer {
 .modal-body{
   background-color: rgb(2, 2, 2);
   border-style: none;
+  color: rgba(218, 218, 218, 0.904);
+  align-content: center;
+}
+
+.modal-contact-body{
+  background-color: rgb(2, 2, 2);
+  border-style: none;
+  color: rgba(218, 218, 218, 0.904);
+  padding: 20px;
 }
 
 .modal-footer{
