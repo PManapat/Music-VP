@@ -42,7 +42,7 @@ $(document).ready(function () {
         console.log(apparelInfo);
         var short = `<img src="https://clipartart.com/images250_/t-shirt-png-transparent-clipart-3.png"width=80px height=80px/>`;
         var rainyDay = `<img src="https://lathompson.co.nz/wp-content/uploads/2019/09/Its-Raining.jpg"width=100px height=100px/>`;
-        var coldDayCloud=`<img src="https://besthqwallpapers.com/img/original/51113/brooklyn-bridge-new-york-world-trade-center-1-usa-skyscrapers.jpg" width=100px height=  100px`;
+        var coldDayCloud = `<img src="https://besthqwallpapers.com/img/original/51113/brooklyn-bridge-new-york-world-trade-center-1-usa-skyscrapers.jpg" width=100px height=  100px`;
         var coldDay = `<img src="https://s1.1zoom.me/big0/813/USA_Bridges_Houses_Brooklyn_New_York_City_529472_1280x857.jpg" width=100px height=100px`;
         var sunny = `<img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1449910230000/photosp/1b191d15-157a-44a0-84f4-bbf7126d504b/stock-photo-skyline-leaves-fall-sunny-nyc-iphone-centralpark-sheeps-meadows-1b191d15-157a-44a0-84f4-bbf7126d504b.jpg" width=100px height=100px/>`;
         var umbrella = ` <img src="/Images/umbrella.png"width=80px height=80px'/>
@@ -56,8 +56,8 @@ $(document).ready(function () {
           result = "Stay dry " + "<br>" + umbrella;
           result1 = rainyDay;
           console.log(short);
-        } else if (infoTemp >= 55 ) {
-          result = ("Stay light " + "<br>" + short);
+        } else if (infoTemp >= 55) {
+          result = "Stay light " + "<br>" + short;
           result1 = sunny;
         } else if (infoTemp < 55 && infoWeather === "clear sky") {
           result = "Stay Warm " + "<br>" + winter;
@@ -72,24 +72,31 @@ $(document).ready(function () {
 
         forecastcard.append(
           "<div class=fiveDayColor id=fiveDaybg style='text-align:center'>" +
-
-          "<p>" + cityName + "</P>" +
-          "<p>" + dayName + "</p>" +
-          "<p>" +
-          realfiveDate +
-          "</p>" +
-          "<p>" + infoWeather + "<br>"+"</p>" + result1 + "<br>" +
-          // `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` +
-          "<p>" +
-          "Temperature: " +
-          forecast.list[i].main.temp + " °F" +
-          "</p>" +
-          "<p>" +
-          result
-          +
-          "</p>" +
-          "</div>"
-
+            "<p>" +
+            cityName +
+            "</P>" +
+            "<p>" +
+            dayName +
+            "</p>" +
+            "<p>" +
+            realfiveDate +
+            "</p>" +
+            "<p>" +
+            infoWeather +
+            "<br>" +
+            "</p>" +
+            result1 +
+            "<br>" +
+            // `<img src="https://openweathermap.org/img/wn/${forecast.list[i].weather[0].icon}@2x.png">` +
+            "<p>" +
+            "Temperature: " +
+            forecast.list[i].main.temp +
+            " °F" +
+            "</p>" +
+            "<p>" +
+            result +
+            "</p>" +
+            "</div>"
         );
       }
     }
@@ -196,7 +203,7 @@ $("#datesTix").click();
         $(".modal-body").append(
           "<a class= 'topTixFont' target='_blank' href='" +
             urls +
-            "'><div class = 'topTix'>" +
+            "'><div class = 'topTix' style='text-align:center'>" +
             names +
             " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" +
             images +
@@ -213,55 +220,86 @@ $("#datesTix").click();
   $("#venueTix").on("click", function () {
     $(".modal-body").empty();
 
-    // Dates card click brings up modal
-    $("#datesTix").on("click", function(){
-        $(".modal-body").empty();
-        $(".modal-body").append("<div id='table-wrapper'><div id='table-scroll'><table id='modal-table'>");
-        $("#modal-table").append("<thead><tr class='modal-table-header'><th>Date</th><th>Event</th></tr></thead>");
-        $("#modal-table").append("<tbody>");
-        
-        //Declare variables
-        var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
-        var venueSearch = "https://app.ticketmaster.com/discovery/v2/events";
-        var today = (moment().format('YYYY-MM-DD'));
-        var plus5days = (moment().add(5, 'days').format('YYYY-MM-DD'));
+    //Declare variables
+    var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+    var venueSearch = "https://app.ticketmaster.com//discovery/v2/venues.json?";
+    var venueNYC = [
+      "Madison Square Garden",
+      "Barclays Center",
+      "Radio City Music Hall",
+      "Apollo Theater",
+      "Bowery Ballroom",
+    ];
 
-  // Dates card click brings up modal
-  $("#datesTix").on("click", function () {
-    $(".modal-body").empty();
-    $(".modal-body").append("<table id='modal-table'>");
-    $("#modal-table").append(
-      "<tr><th id='modal-table-header'>Date</th><th>Event</th></tr>"
-    );
+    var msg = "&id=KovZpZA7AAEA";
+    var bowery = "&id=KovZpZA7dkJA";
+    var radioCity = "&id=KovZpZAE7vdA";
+    var barclays = "&id=KovZpakSbe";
+    var apollo = "&id=KovZpZA7AAIA";
 
-        $.ajax({
-            url: queryUrl,
-            method: "GET"
-        }).then(function (response){
-            // Display Modal
-            $("#exampleModalLongTitle").text("Check What's Coming Up Soon in NYC");
-            for (i = 0; i < 20; i++){
-                var urls= response._embedded.events[i].url;
-                var names= response._embedded.events[i].name;
-                var eventDates = response._embedded.events[i].dates.start.localDate;
-                $("#modal-table").append("<tr><td>" + moment(eventDates).format('LL') + "</td><td><a class= 'topTixFont' target='_blank' href='" + urls + "'>" + names + " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/></a></td></tr>");
-            } $(".modal-body").append("<button type='button' class='btn btn-secondary' data-dismiss='modal' align='right'>Close</button><tr>")
-        })  
-    })
-/// Search function with Ajax ca
-$("#open-search").on("click", function(event){
-event.preventDefault();
-var searchInput = $("#user-input").val()
-console.log(searchInput);
+    var queryUrl =
+      venueSearch + msg + bowery + radioCity + barclays + apollo + APIKey;
 
     $.ajax({
       url: queryUrl,
       method: "GET",
     }).then(function (response) {
       // Display Modal
-      console.log(response);
+      $("#exampleModalLongTitle").text("Get Tix to the TOP 5 Venues in NYC");
+      for (i = 0; i < venueNYC.length; i++) {
+        var urls = response._embedded.venues[i].url;
+        var names = response._embedded.venues[i].name;
+        var images = response._embedded.venues[i].images[0].url;
+        $(".modal-body").append(
+          "<a class= 'topTixFont' target='_blank' href='" +
+            urls +
+            "'><div class = 'topTix' style='text-align:center'>" +
+            names +
+            " <img src='https://img.icons8.com/color/24/000000/add-ticket.png'/><p><img src='" +
+            images +
+            "'width='250px' height='150x'/></p></div></a>"
+        );
+      }
+      $(".modal-body").append(
+        "<button type='button' class='btn btn-secondary' data-dismiss='modal' align='right'>Close</button>"
+      );
+    });
+  });
+
+  // Dates card click brings up modal
+  $("#datesTix").on("click", function () {
+    $(".modal-body").empty();
+    $(".modal-body").append(
+      "<div id='table-wrapper' style='text-align:center'><div id='table-scroll'><table id='modal-table'>"
+    );
+    $("#modal-table").append(
+      "<thead><tr class='modal-table-header'><th>Date</th><th>Event</th></tr></thead>"
+    );
+    $("#modal-table").append("<tbody>");
+
+    //Declare variables
+    var APIKey = "?apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+    var venueSearch = "https://app.ticketmaster.com/discovery/v2/events";
+    var today = moment().format("YYYY-MM-DD");
+    var plus5days = moment().add(5, "days").format("YYYY-MM-DD");
+
+    var queryUrl =
+      venueSearch +
+      APIKey +
+      "&classificationName=music&city=new%20york&sort=date,asc" +
+      "&startEndDateTime=" +
+      today +
+      "T00:00:00Z," +
+      plus5days +
+      "T23:59:59Z";
+
+    $.ajax({
+      url: queryUrl,
+      method: "GET",
+    }).then(function (response) {
+      // Display Modal
       $("#exampleModalLongTitle").text("Check What's Coming Up Soon in NYC");
-      for (i = 0; i < 10; i++) {
+      for (i = 0; i < 20; i++) {
         var urls = response._embedded.events[i].url;
         var names = response._embedded.events[i].name;
         var eventDates = response._embedded.events[i].dates.start.localDate;
@@ -285,21 +323,24 @@ console.log(searchInput);
     event.preventDefault();
     var searchInput = $("#user-input").val();
     console.log(searchInput);
-
-    var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
-    var openSearch =
-      "https://app.ticketmaster.com//discovery/v2/events?keyword=";
-    var queryUrlS = openSearch + searchInput + APIKey;
-    $.ajax({
-      url: queryUrlS,
-      method: "GET",
-    }).then(function (response) {
-      console.log(response);
-      console.log(response._embedded.events[0].url);
-      var results = response._embedded.events[0].name;
-      var ticketLink = "https://www.ticketmaster.com/search?q=";
-      window.open(ticketLink + results);
-    });
+    if (searchInput === "") {
+      return;
+    } else {
+      var APIKey = "&apikey=bormTRVJ8VGhGmIeOGKrWGP9sMRHoO02";
+      var openSearch =
+        "https://app.ticketmaster.com//discovery/v2/events?keyword=";
+      var queryUrlS = openSearch + searchInput + APIKey;
+      $.ajax({
+        url: queryUrlS,
+        method: "GET",
+      }).then(function (response) {
+        console.log(response);
+        console.log(response._embedded.events[0].url);
+        var results = response._embedded.events[0].name;
+        var ticketLink = "https://www.ticketmaster.com/search?q=";
+        window.open(ticketLink + results);
+      });
+    }
   });
 });
 //});

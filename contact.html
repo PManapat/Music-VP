@@ -1,153 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="style1.css">
-    <title>Title</title>
-</head>
-<body>
-<!-- New nav -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">
-    <img src="Images\Logo.png" width="50" height="50" alt="Music-VP Logo">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-              <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Artists</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Venues</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Dates</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="AboutUs.html">Meet the Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
-  </div>
-</nav>
-<!-- New nav end -->
-  <!-- Nav starts -->
-  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <img src="Images\Logo.png" width="50px" height="50px" alt="MVP logo" hspace="20">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="style1.css">
+  <title>Title</title>
+</head>
+
+<body>
+  <!-- New nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="Images\Logo.png" width="50" height="50" alt="Music-VP Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-          <a  id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="navbar-toggler-icon btn-outline-danger "></span>
-          </a>
-          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-            <a class="dropdown-item btn-outline-danger" href="#" id="artistTix" type="button" data-toggle="modal" data-target="#exampleModalLong">Artists</a>
-            <a class="dropdown-item btn-outline-danger" href="#" id="venueTix" type="button" data-toggle="modal" data-target="#exampleModalLong">Venues</a>
-            <a class="dropdown-item btn-outline-danger" href="#" id="datesTix" type="button" data-toggle="modal" data-target="#exampleModalLong">Dates</a>
-            <a class="dropdown-item btn-outline-danger" href="home.html">Home</a>
-          </div>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
         </li>
-              </ul>
-          </div>
-  </nav> -->
-<!-- Nav ends -->
-  
-    <div class="card" style="margin-top: 100px; margin-left:100px;  margin-right:100px; margin-bottom: 600px; opacity: 0.8; padding: 20px;">
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Your email </label>
-                <input type="email" class="form-control" placeholder="name@example.com">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Your name</label>
-                <input type="text" class="form-control" placeholder="name">
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Your message</label>
-                <textarea class="form-control" rows="3"></textarea>
-            </div>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contact-modal">
-              Submit</button>
-        </form>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="artistTix" type="button" data-toggle="modal"
+            data-target="#exampleModalLong">Artist</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="venueTix" type="button" data-toggle="modal"
+            data-target="#exampleModalLong">Venues</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="datesTix" type="button" data-toggle="modal"
+            data-target="#exampleModalLong">Dates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AboutUs.html">Meet the Team</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
     </div>
-   
-    
- <!-- Modal Starts -->
- <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog"
- aria-labelledby="contact-title" aria-hidden="true">
- <div class="modal-dialog" role="document">
-   <div class="modal-content">
-     <div class="modal-header">
-       <h5 class="modal-title" id="contact-title">Contact Us</h5>
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true">&times;</span>
-       </button>
-     </div>
-     <div class="modal-body">
-       Thank you for reaching out to us! 
-       We are currently working on this feature and you can see the enhancement in the next phase.
-     </div>
-     <div class="modal-footer">
-       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       </div>
-   </div>
- </div>
-</div> 
- <!-- Modal Ends -->
- 
+  </nav>
+  <!-- New nav end -->
+
+  <div class="card"
+    style="margin-top: 100px; margin-left:100px;  margin-right:100px; margin-bottom: 600px; opacity: 0.8; padding: 20px;">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Your email </label>
+        <input type="email" class="form-control" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Your name</label>
+        <input type="text" class="form-control" placeholder="name">
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Your message</label>
+        <textarea class="form-control" rows="3"></textarea>
+      </div>
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contact-modal">
+        Submit</button>
+    </form>
+  </div>
 
 
-     <!-- Modal -->
-     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
-     aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-     <div class="modal-dialog" role="document">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-             <span aria-hidden="true">&times;</span>
-           </button>
-         </div>
-         <div class="modal-body">
-           Top 5 Trending Artist
-         </div>
-       </div>
-     </div>
-   </div>
+  <!-- Modal Starts -->
+  <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-title"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contact-title">Contact Us</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Thank you for reaching out to us!
+          We are currently working on this feature and you can see the enhancement in the next phase.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Ends -->
 
 
 
- <!-- Footer Starts -->
- <footer class="footer mt-auto py-3 bg-dark ">
-  <div class="justify-content-center">
-    <span class="text-white"> Copyright @Music VP | Social Media   </span>
-      <a href="https://www.facebook.com/" target="_blank"><img src="Images\facebook.png" alt="Facebook" width="40px" height="40px" hspan="20"></a>    
-      <a href="https://www.instagram.com/" target="_blank" ><img src="Images\instagram.png" alt="Instagram" width="40px" height="40px" hspan="20" ></a>     
-      <a href="https://twitter.com/" target="_blank"><img src="Images\twitter.png" alt="Twitter" width="40px" height="40px" hspan="20"></a>  
-      <a href="https://www.pinterest.com/" target="_blank"><img src="Images\pinterest.png" alt="Pinterest" width="40px" height="40px" hspan="20"></a>
-</div>
-</footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-    <script src="script.js"></script>
-    </body>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer Starts -->
+  <footer class="footer mt-auto py-3 bg-dark ">
+    <div class="justify-content-center">
+      <span class="text-white"> Copyright @Music VP | Social Media </span>
+      <a href="https://www.facebook.com/" target="_blank"><img src="Images\facebook.png" alt="Facebook" width="30px"
+          height="30px" hspan="20"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="Images\instagram.png" alt="Instagram" width="30px"
+          height="30px" hspan="20"></a>
+      <a href="https://twitter.com/" target="_blank"><img src="Images\twitter.png" alt="Twitter" width="30px"
+          height="30px" hspan="20"></a>
+      <a href="https://www.pinterest.com/" target="_blank"><img src="Images\pinterest.png" class="mr-1" alt="Pinterest" width="30px"
+          height="30px" hspan="20"></a><a href="https://www.snapchat.com/" target="_blank"><img src="Images/snapchat.webp" alt="Snapchat" width="30px"
+            height="30px" hspan="20"></a>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

@@ -66,3 +66,92 @@ body {
       width: 100%;
       display: block;
     }
+  }
+  #cards-title{
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.modal-header{
+    background-color: rgb(83, 83, 83);
+    color: whitesmoke;
+    border-bottom: none;
+}
+.modal-body{
+    background-color: rgb(2, 2, 2);
+    border-style: none;
+}
+
+.modal-footer{
+    background-color: rgb(2, 2, 2);
+    border-style: none;
+}
+
+.topTixFont{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: burlywood;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.topTix{
+    margin: 20px 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: peru;
+    background-color: rgb(34, 34, 34);
+    
+}
+
+.topTix:hover{
+    zoom: 115%;
+    border-width: 2px;
+    border-color: rgb(243, 200, 147);
+    color: burlywood;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+#modal-table{
+    border: 1px solid rgb(185, 101, 17);
+    color: whitesmoke;
+    padding: 10px;
+    margin: 20px 10px;
+}
+
+.modal-table-header{
+    color: black;
+    background-color: rgb(185, 101, 17);
+}
+
+#modal-table tr{
+    border-color: rgb(185, 101, 17);
+    border-style: dotted;
+    border-width: 1px;
+    padding: 10px 10px;
+}
+
+#modal-table td:nth-child(1){
+    background-color: rgb(43, 43, 43);
+    width: 30%;
+    padding: 5px 10px;
+}
+
+table tbody { 
+    height:450px; 
+    overflow-y:scroll; 
+    display:block; 
+}
+
+.modal-table-header{ 
+    display:inline-table; 
+    width:-webkit-fill-available;
+}
+
+.modal-table-header th:nth-child(1){
+    width:30%;
+}
