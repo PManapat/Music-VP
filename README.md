@@ -2,33 +2,41 @@
 
 ## Purpose/Elevator Pitch
 
-* Elevator pitch: a one minute description of your application
+* Elevator pitch: "Music brings people all over the world." We wanted to build an app where users can plan for their musical events in New York City. Our Project name is 'Music Venue Planner' or 'Music-VP'
 
 ## Concept/User Story
 
-* Concept: What is your user story? What was your motivation for development?
+* Concept: Search for the music events and concerts in New York City and plan your event.
+* User Story: As a music lover I would like to see music events in NYC and plan for the event I am going to attend.
 
 ## Process
 
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+* Technologies: HTML, CSS, Jquery, AJax, Bootstrap, APIs (ticketmaster.com, bandsintown.com, openweathermap.com)
+* Challenges: Meeting virtually, merging codes.
+* Successes: Knowing each other strengths, completing the project by our internal dealine, personal growth.
 
 ## Design/Functionality
 
 ```
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut metus vestibulum, efficitur dui a, posuere purus. Suspendisse elementum ultrices ligula et eleifend. Donec eu rhoncus nulla, a viverra velit. Curabitur sed quam ac odio pretium convallis. In risus est, finibus eu est blandit, facilisis eleifend nisi. Pellentesque cursus ultricies leo ut varius. Aenean bibendum nisl sodales, pharetra ex vitae, pulvinar justo. Fusce luctus odio in viverra tempor. Integer ac est quam. Integer tortor dui, aliquet a rutrum eu, placerat in metus.
+Tasks and Roles
+1. Creating user interface
+2. Researching APIs and getting keys
+3. Coding and building
+4. Testing
+5. Creating demo presentation
 
 ```
 
 ## Future Development
 
-* Directions for Future Development
+* Extend our services to outside of NY
+* Enhance the current features
+* Include hotel booking and flight booking
 
 ## Contributors
 
 ```
 Richard Capuy
-Giselle Cruz
 Suraj Gurung
 Deepali Jain
 Phillip Manapat
