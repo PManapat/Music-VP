@@ -10,6 +10,10 @@
     font-size: small;
 }
 
+#fiveDaybg:hover{
+    color: burlywood;
+}
+
 .bgcolor {
     padding: 20px;
     /* background-color:rgba(149, 172, 161, 0.589); */
